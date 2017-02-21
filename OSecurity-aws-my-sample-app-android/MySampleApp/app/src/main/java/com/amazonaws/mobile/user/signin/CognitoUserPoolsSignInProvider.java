@@ -33,6 +33,7 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPas
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.GenericHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
 import com.mysampleapp.R;
+import com.mysampleapp.SignInActivity;
 import com.mysampleapp.demo.userpools.ForgotPasswordActivity;
 import com.mysampleapp.demo.userpools.MFAActivity;
 import com.mysampleapp.demo.userpools.SignUpActivity;
@@ -175,7 +176,7 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
 
         @Override
         public void onFailure(final Exception exception) {
-            Log.e(LOG_TAG, "Password change failed.", exception);
+            Log.e(LOG_TAG, "Endring av passord feilet.", exception);
             ViewHelper.showDialog(activity, activity.getString(title_activity_forgot_password),
                     activity.getString(password_change_failed) + " " + exception);
         }
@@ -205,8 +206,11 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
             Log.e(LOG_TAG, "Sign up failed.", exception);
             ViewHelper.showDialog(activity, activity.getString(title_activity_sign_up),
                     activity.getString(sign_up_failed));
+
+
         }
     };
+
 
     /**
      * Handle callbacks from the Sign Up - Confirm Account flow.
@@ -221,9 +225,10 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
 
         @Override
         public void onFailure(Exception exception) {
-            Log.e(LOG_TAG, "Failed to confirm user.", exception);
+            Log.e(LOG_TAG, "Feilet bekrefting av bruker", exception);
             ViewHelper.showDialog(activity, activity.getString(title_activity_sign_up_confirm),
                     activity.getString(sign_up_confirm_failed) + " " + exception);
+
         }
     };
 

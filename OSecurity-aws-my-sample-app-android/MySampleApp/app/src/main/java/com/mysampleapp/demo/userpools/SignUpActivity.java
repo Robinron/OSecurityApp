@@ -47,15 +47,19 @@ public class SignUpActivity extends Activity {
         Log.d(LOG_TAG, "email = " + email);
         Log.d(LOG_TAG, "phone = " + phone);
 
+
         final Intent intent = new Intent();
+
         intent.putExtra(CognitoUserPoolsSignInProvider.AttributeKeys.USERNAME, username);
         intent.putExtra(CognitoUserPoolsSignInProvider.AttributeKeys.PASSWORD, password);
         intent.putExtra(CognitoUserPoolsSignInProvider.AttributeKeys.GIVEN_NAME, givenName);
         intent.putExtra(CognitoUserPoolsSignInProvider.AttributeKeys.EMAIL_ADDRESS, email);
         intent.putExtra(CognitoUserPoolsSignInProvider.AttributeKeys.PHONE_NUMBER, phone);
-
         setResult(RESULT_OK, intent);
-
         finish();
+
+
+
+
     }
 }

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="24"
+    density="420dpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="335628710173912"
+    token="-8877302500668854252"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="540" />
+    <task
+        name="instant-run-dex"
+        duration="22" />
+    <task
+        name="instant-run-transform"
+        duration="33" />
+    <task
+        name="verifier"
+        duration="2" />
+
+    <artifact
+        location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="334304101050491"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="335299719902835"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\builds\debug\335299719902835\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="335628710173912"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
