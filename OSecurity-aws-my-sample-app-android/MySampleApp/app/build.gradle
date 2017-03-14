@@ -50,10 +50,18 @@ dependencies {
     compile('com.amazonaws:aws-android-sdk-s3:2.3.9')
     compile ('com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.3.9')
     compile 'com.google.code.gson:gson:2.7'
+    compile ('com.amazonaws:aws-android-sdk-iot:2.2.+')
+    compile ('org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0')
+    compile ('org.eclipse.paho:org.eclipse.paho.android.service:1.1.1')
+    compile 'com.android.support:multidex:1.0.0'
+
 }
 
 repositories{
     flatDir{
         dirs 'libs'
+    }
+    maven{
+        url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
     }
 }
