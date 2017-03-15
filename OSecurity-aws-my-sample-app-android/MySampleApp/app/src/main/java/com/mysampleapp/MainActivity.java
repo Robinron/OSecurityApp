@@ -35,6 +35,7 @@ import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
+import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.mysampleapp.demo.DemoConfiguration;
@@ -43,6 +44,8 @@ import android.content.IntentFilter;
 import android.content.BroadcastReceiver;
 import android.support.v4.content.LocalBroadcastManager;
 import android.widget.Toast;
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+
 
 //import com.mysampleapp.mqtt.MqttPub;
 import com.mysampleapp.navigation.NavigationDrawer;
@@ -51,6 +54,13 @@ import java.util.List;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    AWSIotMqttManager mqttManager;
+    String clientId;
+
+    AWSCredentials awsCredentials;
+    CognitoCachingCredentialsProvider credentialsProvider;
+
     /** Class name for log messages. */
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
@@ -76,33 +86,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mqttButton;
 
-/**
-    //static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
-    // This should be used with: https://github.com/awslabs/aws-sdk-android-samples/blob/master/AndroidPubSubWebSocket/src/com/amazonaws/demo/androidpubsubwebsocket/PubSubActivity.java
-    // To log events
-
-    // --- Constants to modify per your configuration ---
-
     // Customer specific IoT endpoint
     // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com,
     private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a3enni6esrlrke.iot.eu-west-1.amazonaws.com";
     // Cognito pool ID. For this app, pool needs to be unauthenticated pool with
     // AWS IoT permissions.
-    private static final String COGNITO_POOL_ID = " eu-west-1_2F3hyifQN";
+    private static final String COGNITO_POOL_ID = "eu-west-1:b3aade10-c009-40ed-94f7-422c4134f298";
 
     // Region of AWS IoT
     private static final Regions MY_REGION = Regions.EU_WEST_1;
 
-    AWSIotMqttManager mqttManager;
-    String clientId;
 
-    AWSCredentials awsCredentials;
-    CognitoCachingCredentialsProvider credentialsProvider;
-
-    Context context = getApplicationContext();
-    CharSequence text = " ";
-    int duration = Toast.LENGTH_SHORT;
- */
 
     /**
      * Initializes the Toolbar for use with the activity.
@@ -190,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Context context = getApplicationContext();
                 CharSequence text = "Hei toast, knapp funker";
                 int duration = Toast.LENGTH_SHORT;
-
+                publish();
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
             }
@@ -201,7 +195,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //autoConnect();
 
 
+        // Initialize the AWS Cognito credentials provider
+        credentialsProvider = new CognitoCachingCredentialsProvider(
+                getApplicationContext(), // context
+                COGNITO_POOL_ID, // Identity Pool ID
+                MY_REGION // Region
+        );
+
+
+
+        mqttSetup();
+
+
+
+
     }
+
+    public CognitoCachingCredentialsProvider getCredentialsProvider(){
+        return credentialsProvider;
+    };
 
     @Override
     protected void onResume() {
@@ -436,4 +448,112 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }*/
+
+    public void connect(){
+        // MQTT client IDs are required to be unique per AWS IoT account.
+        // This UUID is "practically unique" but does not _guarantee_
+        // uniqueness.
+        clientId = "5in53dki8vtmph891d4uncf454";
+        //tvClientId = clientId;
+
+        /** // Initialize the AWS Cognito credentials provider
+         credentialsProvider = new CognitoCachingCredentialsProvider(
+         context, // context
+         COGNITO_POOL_ID, // Identity Pool ID
+         MY_REGION // Region
+         );*/
+
+        Region region = Region.getRegion(MY_REGION);
+
+        // MQTT Client
+        mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
+
+        // The following block uses IAM user credentials for authentication with AWS IoT.
+        //awsCredentials = new BasicAWSCredentials("ACCESS_KEY_CHANGE_ME", "SECRET_KEY_CHANGE_ME");
+        //btnConnect.setEnabled(true);
+
+        credentialsProvider = new CognitoCachingCredentialsProvider(
+                getApplicationContext(), // context
+                COGNITO_POOL_ID, // Identity Pool ID
+                MY_REGION // Region
+        );
+
+
+        // The following block uses a Cognito credentials provider for authentication with AWS IoT.
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                awsCredentials = credentialsProvider.getCredentials();
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //btnConnect.setEnabled(true);
+                    }
+                });
+            }
+        }).start();
+
+
+        Log.d(LOG_TAG, "clientId = " + clientId);
+
+        try {
+            mqttManager.connect(credentialsProvider, new AWSIotMqttClientStatusCallback() {
+                @Override
+                public void onStatusChanged(final AWSIotMqttClientStatus status,
+                                            final Throwable throwable) {
+                    Log.d(LOG_TAG, "Status = " + String.valueOf(status));
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (status == AWSIotMqttClientStatus.Connecting) {
+                               // tvStatus.setText("Connecting...");
+
+
+                            } else if (status == AWSIotMqttClientStatus.Connected) {
+                                //tvStatus.setText("Connected");
+
+                            } else if (status == AWSIotMqttClientStatus.Reconnecting) {
+                                if (throwable != null) {
+                                    Log.e(LOG_TAG, "Connection error.", throwable);
+                                    Log.d(LOG_TAG, "Conn error", throwable);
+                                }
+
+                                //tvStatus.setText("Reconnecting");
+                            } else if (status == AWSIotMqttClientStatus.ConnectionLost) {
+                                if (throwable != null) {
+                                    Log.e(LOG_TAG, "Connection error.", throwable);
+                                    throwable.printStackTrace();
+                                }
+                                //tvStatus.setText("Disconnected");
+                            } else {
+                                //tvStatus.setText("Disconnected");
+
+                            }
+                        }
+                    });
+                }
+            });
+        } catch (final Exception e) {
+            Log.e(LOG_TAG, "Connection error.", e);
+            //tvStatus.setText("Error! " + e.getMessage());
+        }
+    };
+
+    public void publish(){
+        final String topic = "/osecurity/armdisarm";
+        final String msg = "y";
+
+        try {
+            mqttManager.publishString(msg, topic, AWSIotMqttQos.QOS0);
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "Publish error.", e);
+        }
+    };
+
+    public void mqttSetup(){
+        connect();
+
+    };
 }
