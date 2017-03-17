@@ -177,16 +177,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setupNavigationMenu(savedInstanceState);
 
         mqttButton = (Button) findViewById(R.id.mqttButton);
+        clientId = UUID.randomUUID().toString();
+
 
         mqttButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Context context = getApplicationContext();
-                CharSequence text = "Hei toast, knapp funker";
-                int duration = Toast.LENGTH_SHORT;
-                publish();
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                //Context context = getApplicationContext();
+                //CharSequence text = "Hei toast, knapp funker";
+                //int duration = Toast.LENGTH_SHORT;
+                mqttSetup();
+                //Toast toast = Toast.makeText(context, text, duration);
+                //toast.show();
             }
         } );
 
@@ -202,11 +204,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MY_REGION // Region
         );
 
+        Region region = Region.getRegion(MY_REGION);
 
 
-        mqttSetup();
+        // MQTT Client
+        mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
 
 
+
+
+        // The following block uses a Cognito credentials provider for authentication with AWS IoT.
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                awsCredentials = credentialsProvider.getCredentials();
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //btnConnect.setEnabled(true);
+                    }
+                });
+            }
+        }).start();
 
 
     }
@@ -453,7 +473,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // MQTT client IDs are required to be unique per AWS IoT account.
         // This UUID is "practically unique" but does not _guarantee_
         // uniqueness.
-        clientId = "5in53dki8vtmph891d4uncf454";
         //tvClientId = clientId;
 
         /** // Initialize the AWS Cognito credentials provider
@@ -464,35 +483,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          );*/
 
         Region region = Region.getRegion(MY_REGION);
+        Regions region1 = MY_REGION;
 
-        // MQTT Client
-        mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
+
 
         // The following block uses IAM user credentials for authentication with AWS IoT.
         //awsCredentials = new BasicAWSCredentials("ACCESS_KEY_CHANGE_ME", "SECRET_KEY_CHANGE_ME");
         //btnConnect.setEnabled(true);
 
-        credentialsProvider = new CognitoCachingCredentialsProvider(
-                getApplicationContext(), // context
-                COGNITO_POOL_ID, // Identity Pool ID
-                MY_REGION // Region
-        );
 
 
-        // The following block uses a Cognito credentials provider for authentication with AWS IoT.
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                awsCredentials = credentialsProvider.getCredentials();
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        //btnConnect.setEnabled(true);
-                    }
-                });
-            }
-        }).start();
 
 
         Log.d(LOG_TAG, "clientId = " + clientId);

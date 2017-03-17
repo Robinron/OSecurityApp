@@ -2,32 +2,32 @@
 <instant-run
     abi="x86"
     api-level="25"
-    density="xxhdpi"
+    density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="15013435796521"
+    timestamp="10711246726748"
     token="5830540801881922955"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="772" />
+        duration="897" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="467" />
+        duration="344" />
     <task
         name="verifier"
-        duration="96" />
+        duration="84" />
 
     <artifact
         location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="15013435796521"
+        timestamp="10711246726748"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
