@@ -24,12 +24,12 @@
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/button_login_pressed.png"
     },
     {
-        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/user_profile_data.png",
-        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/user_profile_data.png"
-    },
-    {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/user_data_storage.png",
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/user_data_storage.png"
+    },
+    {
+        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/user_profile_data.png",
+        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/user_profile_data.png"
     },
     {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/theme_1_selected.png",

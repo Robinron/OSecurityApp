@@ -26,6 +26,13 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <service android:name="org.eclipse.paho.android.service.MqttService" >
+    </service>
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.0" />
+
     <application
         name="com.mysampleapp.Application"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
@@ -69,7 +76,7 @@
             android:label="@string/title_activity_sign_up_confirm" >
         </activity>
         <activity
-            android:name="com.mysampleapp.MainActivity"
+            android:name="com.mysampleapp.PubSubActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleInstance" >
         </activity>
