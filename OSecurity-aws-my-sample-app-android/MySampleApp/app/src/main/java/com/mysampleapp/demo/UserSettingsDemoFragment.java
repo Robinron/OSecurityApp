@@ -16,6 +16,7 @@ import com.amazonaws.mobileconnectors.cognito.Record;
 import com.amazonaws.mobileconnectors.cognito.SyncConflict;
 import com.amazonaws.mobileconnectors.cognito.exceptions.DataStorageException;
 import com.mysampleapp.MainActivity;
+import com.mysampleapp.PubSubActivity;
 import com.mysampleapp.R;
 
 import java.util.List;
@@ -130,7 +131,7 @@ public class UserSettingsDemoFragment extends Fragment {
             protected void onPostExecute(final Void aVoid) {
 
                 // update color
-                ((MainActivity) getActivity()).updateColor();
+                ((PubSubActivity) getActivity()).updateColor();
 
                 // save user settings to remote on background thread
                 userSettings.getDataset().synchronize(new Dataset.SyncCallback() {
@@ -209,7 +210,7 @@ public class UserSettingsDemoFragment extends Fragment {
                     dialog.dismiss();
                 }
 
-                ((MainActivity) getActivity()).updateColor();
+                ((PubSubActivity) getActivity()).updateColor();
             }
         });
     }

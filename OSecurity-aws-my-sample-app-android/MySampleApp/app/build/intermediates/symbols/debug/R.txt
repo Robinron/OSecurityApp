@@ -690,14 +690,14 @@ int id nav_drawer_items 0x7f0c0078
 int id never 0x7f0c002f
 int id none 0x7f0c001d
 int id normal 0x7f0c0019
-int id notification_background 0x7f0c00d3
+int id notification_background 0x7f0c00d2
 int id notification_main_column 0x7f0c00cd
 int id notification_main_column_container 0x7f0c00cc
 int id parentPanel 0x7f0c003f
 int id progress_circular 0x7f0c0011
 int id progress_horizontal 0x7f0c0012
 int id radio 0x7f0c004f
-int id right_icon 0x7f0c00d2
+int id right_icon 0x7f0c00d3
 int id right_side 0x7f0c00ce
 int id salesforce_banner 0x7f0c00ba
 int id screen 0x7f0c0024

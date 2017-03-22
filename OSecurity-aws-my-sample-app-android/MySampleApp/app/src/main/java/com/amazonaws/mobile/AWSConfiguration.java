@@ -24,6 +24,7 @@ public class AWSConfiguration {
       Regions.fromName("eu-west-1");
     public static final String  AMAZON_COGNITO_IDENTITY_POOL_ID =
         "eu-west-1:b3aade10-c009-40ed-94f7-422c4134f298";
+
     // S3 BUCKET
     public static final String AMAZON_S3_USER_FILES_BUCKET =
         "osecurity-userfiles-mobilehub-1924850191";

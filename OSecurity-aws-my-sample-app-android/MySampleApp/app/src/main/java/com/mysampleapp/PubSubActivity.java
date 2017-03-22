@@ -15,7 +15,6 @@
 
 
 package com.mysampleapp;
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -35,34 +34,66 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSBasicCognitoIdentityProvider;
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.mobile.AWSMobileClient;
+import com.amazonaws.mobile.content.ContentManager;
 import com.amazonaws.mobile.user.IdentityManager;
+import com.amazonaws.mobile.user.IdentityProvider;
+import com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider;
+import com.amazonaws.mobileconnectors.cognito.CognitoSyncManager;
 import com.amazonaws.mobileconnectors.cognito.Dataset;
 import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoDevice;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationContinuation;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.ChallengeContinuation;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.MultiFactorAuthenticationContinuation;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoRefreshToken;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoUserToken;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
+
+import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType;
 import com.mysampleapp.demo.DemoConfiguration;
 import com.mysampleapp.demo.UserSettings;
 import com.mysampleapp.navigation.NavigationDrawer;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
-public class PubSubActivity extends AppCompatActivity {
+public class PubSubActivity extends AppCompatActivity  {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
 
     // --- Constants to modify per your configuration ---
+
+
+    private CognitoIdToken idToken;
+
+    /**
+     * Cognito access token.
+     */
+    private CognitoAccessToken accessToken;
+
+    /**
+     * Cognito refresh token.
+     */
+    private CognitoRefreshToken refreshToken;
 
     /**
      * Bundle key for saving/restoring the toolbar title.
@@ -108,6 +139,7 @@ public class PubSubActivity extends AppCompatActivity {
 
 
 
+
     EditText txtSubcribe;
     EditText txtTopic;
     EditText txtMessage;
@@ -126,6 +158,7 @@ public class PubSubActivity extends AppCompatActivity {
 
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
+
 
     /**
      * Initializes the Toolbar for use with the activity.
@@ -250,7 +283,7 @@ public class PubSubActivity extends AppCompatActivity {
         final AWSMobileClient awsMobileClient = AWSMobileClient.defaultMobileClient();
 
         // Obtain a reference to the identity manager.
-        identityManager = awsMobileClient.getIdentityManager();
+        //identityManager = awsMobileClient.getIdentityManager();
 
         setupToolbar(savedInstanceState);
 
@@ -308,14 +341,26 @@ public class PubSubActivity extends AppCompatActivity {
         // tvClientId.setText(clientId);
 
         // Initialize the AWS Cognito credentials provider
+
+
+
+
+
+
+        AuthenticationResultType authenticationResultType = new AuthenticationResultType();
+        String idToken = authenticationResultType.getIdToken();
+        //String idToken = cognitoUserSession.getIdToken().getJWTToken();
+
+        // Initialize the AWS Cognito credentials provider
         credentialsProvider = new CognitoCachingCredentialsProvider(
-                getApplicationContext(),// context
-                "161180806327", // Account ID
-                COGNITO_POOL_ID, // Identity Pool ID
-                "arn:aws:iam::161180806327:role/Cognito_OSecurityAuth_Role", // Auth role ARN
-                "arn:aws:iam::161180806327:role/Cognito_OSecurityUnauth_Role", // Unauth role ARN
-                MY_REGION // Region
+                getApplicationContext(),
+                COGNITO_POOL_ID,
+                MY_REGION
         );
+
+        Map<String, String> logins = new HashMap<String, String>();
+        logins.put("eu-west-1_2F3hyifQN", idToken);
+        credentialsProvider.setLogins(logins);
 
         Region region = Region.getRegion(MY_REGION);
 
@@ -331,7 +376,9 @@ public class PubSubActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
+
                 awsCredentials = credentialsProvider.getCredentials();
+
 
                 runOnUiThread(new Runnable() {
                     @Override
@@ -341,13 +388,30 @@ public class PubSubActivity extends AppCompatActivity {
                 });
             }
         }).start();
+
     }
+    /**
+    private CognitoCachingCredentialsProvider getCredentialsProvider() {
+        return credentialsProvider;
+    }
+     */
+    /**
+    private AWSCredentialsProvider initIdentity() {
+        return IdentityManager.getCredentialsProvider();
+    }
+     */
+
+
 
     View.OnClickListener connectClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
             Log.d(LOG_TAG, "clientId = " + clientId);
+
+            //ClientConfiguration clientConfiguration = new ClientConfiguration();
+            //IdentityManager identityManager = new IdentityManager(getApplicationContext(), clientConfiguration);
+
 
             try {
                 mqttManager.connect(credentialsProvider, new AWSIotMqttClientStatusCallback() {
@@ -386,7 +450,7 @@ public class PubSubActivity extends AppCompatActivity {
                 });
             } catch (final Exception e) {
                 Log.e(LOG_TAG, "Connection error.", e);
-                tvStatus.setText("Error! " + e.getMessage());
+               // tvStatus.setText("Error! " + e.getMessage());
             }
         }
 
