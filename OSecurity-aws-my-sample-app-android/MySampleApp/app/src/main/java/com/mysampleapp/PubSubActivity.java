@@ -1,12 +1,12 @@
 /**
  * Copyright 2010-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at:
- *
- *    http://aws.amazon.com/apache2.0
- *
+ * <p>
+ * http://aws.amazon.com/apache2.0
+ * <p>
  * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
  * OR CONDITIONS OF ANY KIND, either express or implied. See the
  * License for the specific language governing permissions and
@@ -15,6 +15,7 @@
 
 
 package com.mysampleapp;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -33,6 +34,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.AWSBasicCognitoIdentityProvider;
@@ -76,7 +78,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class PubSubActivity extends AppCompatActivity  {
+import javax.xml.datatype.Duration;
+
+public class PubSubActivity extends AppCompatActivity {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
 
@@ -138,8 +142,6 @@ public class PubSubActivity extends AppCompatActivity  {
     private static final Regions MY_REGION = Regions.EU_WEST_1;
 
 
-
-
     EditText txtSubcribe;
     EditText txtTopic;
     EditText txtMessage;
@@ -158,6 +160,10 @@ public class PubSubActivity extends AppCompatActivity  {
 
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
+
+    boolean isArmed = false;
+
+    String msg;
 
 
     /**
@@ -333,6 +339,7 @@ public class PubSubActivity extends AppCompatActivity  {
         mqttButton = (Button) findViewById(R.id.mqttButton);
         mqttButton.setOnClickListener(connectClick);
         mqttButton.setEnabled(false);
+        mqttButton.setText("Arm");
 
         // MQTT client IDs are required to be unique per AWS IoT account.
         // This UUID is "practically unique" but does not _guarantee_
@@ -343,10 +350,7 @@ public class PubSubActivity extends AppCompatActivity  {
         // Initialize the AWS Cognito credentials provider
 
 
-
-
-
-
+        //TODO Fix NotAuthorizedException by using "setLogins" earlier
         AuthenticationResultType authenticationResultType = new AuthenticationResultType();
         String idToken = authenticationResultType.getIdToken();
         //String idToken = cognitoUserSession.getIdToken().getJWTToken();
@@ -391,16 +395,15 @@ public class PubSubActivity extends AppCompatActivity  {
 
     }
     /**
-    private CognitoCachingCredentialsProvider getCredentialsProvider() {
-        return credentialsProvider;
-    }
+     private CognitoCachingCredentialsProvider getCredentialsProvider() {
+     return credentialsProvider;
+     }
      */
     /**
-    private AWSCredentialsProvider initIdentity() {
-        return IdentityManager.getCredentialsProvider();
-    }
+     private AWSCredentialsProvider initIdentity() {
+     return IdentityManager.getCredentialsProvider();
+     }
      */
-
 
 
     View.OnClickListener connectClick = new View.OnClickListener() {
@@ -427,7 +430,9 @@ public class PubSubActivity extends AppCompatActivity  {
                                     //tvStatus.setText("Connecting...");
 
                                 } else if (status == AWSIotMqttClientStatus.Connected) {
-                                    //tvStatus.setText("Connected");
+                                    mqttButton.setClickable(false);
+                                    publish();
+                                    subscribe();
 
                                 } else if (status == AWSIotMqttClientStatus.Reconnecting) {
                                     if (throwable != null) {
@@ -450,16 +455,13 @@ public class PubSubActivity extends AppCompatActivity  {
                 });
             } catch (final Exception e) {
                 Log.e(LOG_TAG, "Connection error.", e);
-               // tvStatus.setText("Error! " + e.getMessage());
+                // tvStatus.setText("Error! " + e.getMessage());
             }
         }
 
 
-        View.OnClickListener subscribeClick = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final String topic = txtSubcribe.getText().toString();
+        public void subscribe(){
+                final String topic = "/osecurity/fromterminal";
 
                 Log.d(LOG_TAG, "topic = " + topic);
 
@@ -472,15 +474,29 @@ public class PubSubActivity extends AppCompatActivity  {
                                         @Override
                                         public void run() {
                                             try {
-                                                String message = new String(data, "UTF-8");
+                                                String message = new String(data);
+
+
                                                 Log.d(LOG_TAG, "Message arrived:");
                                                 Log.d(LOG_TAG, "   Topic: " + topic);
                                                 Log.d(LOG_TAG, " Message: " + message);
 
-                                                tvLastMessage.setText(message);
+                                                if (message.equals("armed")) {
+                                                    mqttButton.setClickable(true);
+                                                    mqttButton.setText("Deaktiver");
+                                                } else if (message.equals("disarmed")) {
+                                                    mqttButton.setClickable(true);
+                                                    mqttButton.setText("Aktiver");
+                                                } else if (message.equals("Terminal er online")) {
+                                                    Log.d(LOG_TAG, "Terminal er online, funker");
+                                                    Toast toast = Toast.makeText(getApplicationContext(), "Terminal er online!", Toast.LENGTH_SHORT);
+                                                    toast.show();
+                                                } else {
+                                                    Log.d(LOG_TAG, "Unsupported input from Pi");
+                                                }
 
-                                            } catch (UnsupportedEncodingException e) {
-                                                Log.e(LOG_TAG, "Message encoding error.", e);
+                                            } catch (NullPointerException e) {
+                                                Log.e(LOG_TAG, "NullPointerException", e);
                                             }
                                         }
                                     });
@@ -489,24 +505,43 @@ public class PubSubActivity extends AppCompatActivity  {
                 } catch (Exception e) {
                     Log.e(LOG_TAG, "Subscription error.", e);
                 }
-            }
+
         };
 
-        View.OnClickListener publishClick = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                final String topic = txtTopic.getText().toString();
-                final String msg = txtMessage.getText().toString();
+        public boolean getArmStatus() {
+            return isArmed;
+        }
 
-                try {
-                    mqttManager.publishString(msg, topic, AWSIotMqttQos.QOS0);
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Publish error.", e);
-                }
-
+        public void switchArmStatus() {
+            if (isArmed = true) {
+                isArmed = false;
+            } else if (isArmed = false) {
+                isArmed = true;
             }
-        };
+        }
+
+        public void publish() {
+
+            String fromApp = "/osecurity/fromapp";
+            if (isArmed) {
+                msg = "n";
+                isArmed = false;
+            } else if (!isArmed) {
+                msg = "y";
+                isArmed = true;
+            }
+
+            try {
+                mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
+            } catch (Exception e) {
+                Log.e(LOG_TAG, "Publish error.", e);
+            }
+
+
+        }
+
+        ;
 
         View.OnClickListener disconnectClick = new View.OnClickListener() {
             @Override
