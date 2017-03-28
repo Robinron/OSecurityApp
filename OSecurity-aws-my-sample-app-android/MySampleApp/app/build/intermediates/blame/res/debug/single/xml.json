@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/xml/content_delivery_paths.xml",
-        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/xml/content_delivery_paths.xml"
+        "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\xml\\content_delivery_paths.xml",
+        "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\xml\\content_delivery_paths.xml"
     }
 ]

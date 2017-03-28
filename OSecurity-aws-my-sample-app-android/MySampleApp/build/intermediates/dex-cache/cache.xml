@@ -3,183 +3,183 @@
 
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.3.9/2fa9ee0e95329912656c8ccd98991b195a3ea539/aws-android-sdk-core-2.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2fa9ee0e95329912656c8ccd98991b195a3ea539">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.3.9_48dd55800b407b689d1d8feb9ec8f8970fb9f569/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fd276351744f74c454b56701f26545c725b06231">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b35a1f0c69b1c93f04dee13dd6afdb25df3dae69/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognito/2.3.9/d7e881325e8217fd65651fc7153a3db06f2e454c/aws-android-sdk-cognito-2.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognito-2.3.9_5cf97721dc99249525e7ff8a3f9606a9016fc601/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_1843762a1e8de7ef226a261061d723f27ebd0b85/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.0_709b516ec194f8061d04638bf296aaf5edc2a2f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-s3/2.3.9/8b4d1ccbb09daafd17aa3eba99af31ad8aecf505/aws-android-sdk-s3-2.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8b4d1ccbb09daafd17aa3eba99af31ad8aecf505">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-s3-2.3.9_5c542a206f8734a17c8260e5a146416be6b8ae02/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="518768f3200963fbfec652f498da2c9d39245234">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.0_f1fbe504ae6e830d7052b5d1002bb97e31a1e547/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/org.eclipse.paho/org.eclipse.paho.client.mqttv3/1.1.0/89d827ffa47c241f2627421ef1d6c7a8c207a341/org.eclipse.paho.client.mqttv3-1.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="89d827ffa47c241f2627421ef1d6c7a8c207a341">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/org.eclipse.paho.client.mqttv3-1.1.0_1e41b45bc23eb483f27f68f3c718ee2f18c7eb4f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.0_4cf59063a8b3d5d4107a3b3e50cf94cf9f684d26/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9404b880c87a22bebba4761ae90e04ae1355a256">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f63fd2137e56e58f8ddc66c06f530d029cd4a77c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.0_6c212b199c3186d1ed0801edf0dd819f2a702eaf/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.3.0_aea90bb94af31ed1712e968e1291eca015e650ba\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa78d1181a049323c6e77282851e3ac14f80c673">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1cbe9a2be4664d49ae14c398dc3548d2be6840d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.0_c9c454a6d923111f402e702df118cea0a6bdc1cc/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.3.0_16f2e357fae6b331a16d3f882a626deb7a965169\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.0_c0c0c9581ab7d3918513d0db241a361c9177b7eb/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.0_c800b8bcb2a7e5c6d73e2716637a5c8d50b73eb5\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/39a3018aee421bd16bc086a92b9bede977da5c93/aws-android-sdk-cognitoidentityprovider-2.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="39a3018aee421bd16bc086a92b9bede977da5c93">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognitoidentityprovider-2.3.9_33dd2d5db922a963f8235a45b5958de82aa9a1f1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_9ae51b02f417ed83ddba99f75594e43c71960baa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.0/support-annotations-25.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.0_10c0021d9de41a90f60d5a5ca15b5adf4e0d50c9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-iot/2.2.22/f0753db8c9be1b837d4922a342e506d51c6bf924/aws-android-sdk-iot-2.2.22.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f0753db8c9be1b837d4922a342e506d51c6bf924">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-iot-2.2.22_1a86f9a192e761061d558e843389371738a8f42c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.0_4099e9e79558ae4964fea3568d994a15ac07d7ae/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.3.0_cf1610fab4b09fceaaca8b74f2a9b47a4c213d8b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_e899ec440eb63a2cce3870034555c7a2c254981d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-iot\2.2.22\f0753db8c9be1b837d4922a342e506d51c6bf924\aws-android-sdk-iot-2.2.22.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0753db8c9be1b837d4922a342e506d51c6bf924">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-iot-2.2.22_d6f2970c7591c55d3928cd55dddce934013b010e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.3.0_a2406e8c05eda2f7e05fd1351d396490329b6577\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.0_41a6fe5f1f3b8aa86bf759baa52ac04b8aa96879\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_c5a394d47abe184b6596fb6ce054f439e42e9687\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.3.9\8b4d1ccbb09daafd17aa3eba99af31ad8aecf505\aws-android-sdk-s3-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8b4d1ccbb09daafd17aa3eba99af31ad8aecf505">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-s3-2.3.9_69281ca700a45c73383ea82f5b2b9d9b1f1d75ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.0_9cca10a485af41fcbfe60367cabed25803a38eb2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.3.9\2fa9ee0e95329912656c8ccd98991b195a3ea539\aws-android-sdk-core-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2fa9ee0e95329912656c8ccd98991b195a3ea539">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-core-2.3.9_184c745ba7f1dd8f0fa7c756f7acc251ed87c0b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_cf52409c43b94471a65fa1bd820470d9704f62c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c486dd21d29c1e82161d0d1278d18ccd02c2883b">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_152b95c42daae9a000fe3ebf7de1d587ae8eba1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognito\2.3.9\d7e881325e8217fd65651fc7153a3db06f2e454c\aws-android-sdk-cognito-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognito-2.3.9_d9b420b09b729032237b5bf88b6c8e94478cc68d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.0_ac75d226497082435759cbd423d650f824bd605c/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.0_c7065036d08caaefcf0847f83c26700f5396fe5b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/jars/classes.jar"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider\2.3.9\39a3018aee421bd16bc086a92b9bede977da5c93\aws-android-sdk-cognitoidentityprovider-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="39a3018aee421bd16bc086a92b9bede977da5c93">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognitoidentityprovider-2.3.9_1dc3883c1f0308bb36e7d3104b097ebce47b0373\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
-        <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.0_40b46a54ea6849984bc8090890d2c96cb224216c/classes.dex" />
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.3.0_d783312314736428bb288bd0c1b39401681eeaa6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Sondre\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.1.0\89d827ffa47c241f2627421ef1d6c7a8c207a341\org.eclipse.paho.client.mqttv3-1.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="89d827ffa47c241f2627421ef1d6c7a8c207a341">
+        <dex dex="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.client.mqttv3-1.1.0_026c8643dfb8cd24278d7f243234e0a094a3c4bc\classes.dex" />
     </item>
 
 </items>

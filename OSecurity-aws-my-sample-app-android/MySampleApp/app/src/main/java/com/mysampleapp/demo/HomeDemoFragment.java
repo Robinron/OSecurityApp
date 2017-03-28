@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,23 +20,30 @@ import com.mysampleapp.R;
 
 public class HomeDemoFragment extends DemoFragmentBase {
 
+
+    //private Button mqttButton;
+
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              final Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_demo_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_demo_home, container, false);
+        //mqttButton = (Button) view.findViewById(R.id.mqttButton);
+        return view;
     }
 
     @Override
     public void onViewCreated(final View view, final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         final DemoListAdapter adapter = new DemoListAdapter(getActivity());
         adapter.addAll(DemoConfiguration.getDemoFeatureList());
 
-        ListView listView = (ListView) view.findViewById(android.R.id.list);
-        listView.setAdapter(adapter);
+        //ListView listView = (ListView) view.findViewById(android.R.id.list);
+        //listView.setAdapter(adapter);
+        /**
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(final AdapterView<?> parent, final View view,
@@ -59,7 +67,11 @@ public class HomeDemoFragment extends DemoFragmentBase {
                 }
             }
         });
+         */
     }
+    //public Button getMqttButton() {
+        //return mqttButton;
+    //}
 
     private static final class DemoListAdapter extends ArrayAdapter<DemoConfiguration.DemoFeature> {
         private LayoutInflater inflater;

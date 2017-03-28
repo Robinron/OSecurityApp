@@ -20,18 +20,27 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,21 +73,39 @@ import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 
 import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.ObjectMetadata;
+import com.amazonaws.services.s3.model.S3Object;
 import com.mysampleapp.demo.DemoConfiguration;
+import com.mysampleapp.demo.HomeDemoFragment;
 import com.mysampleapp.demo.UserSettings;
 import com.mysampleapp.navigation.NavigationDrawer;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
 import javax.xml.datatype.Duration;
+
+
 
 public class PubSubActivity extends AppCompatActivity {
 
@@ -114,6 +141,9 @@ public class PubSubActivity extends AppCompatActivity {
      */
     private Toolbar toolbar;
 
+
+   // private AmazonS3Client s3;
+
     /**
      * Our navigation drawer class for handling navigation drawer logic.
      */
@@ -130,6 +160,8 @@ public class PubSubActivity extends AppCompatActivity {
     private Bundle fragmentBundle;
 
     private Button signOutButton;
+
+    private ImageView snapshotView;
 
     // Customer specific IoT endpoint
     // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com,
@@ -224,13 +256,7 @@ public class PubSubActivity extends AppCompatActivity {
         }
     }
 
-    private final BroadcastReceiver settingsChangedReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d(LOG_TAG, "Received settings changed local broadcast. Update theme colors.");
-            updateColor();
-        }
-    };
+
 
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getApplicationContext());
@@ -281,6 +307,7 @@ public class PubSubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // Obtain a reference to the mobile client. It is created in the Application class,
         // but in case a custom Application class is not used, we initialize it here if necessary.
         AWSMobileClient.initializeMobileClientIfNecessary(this);
@@ -294,6 +321,31 @@ public class PubSubActivity extends AppCompatActivity {
         setupToolbar(savedInstanceState);
 
         setupNavigationMenu(savedInstanceState);
+
+        LayoutInflater inflater = this.getLayoutInflater();
+        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
+        View homeView = inflater.inflate(R.layout.fragment_demo_home , viewGroup);
+        mqttButton = (Button) homeView.findViewById(R.id.mqttButton);
+
+        mqttButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                connectClick();
+                Log.d(LOG_TAG, "BUTTON IS CLICKED!");
+            }
+        });
+
+        snapshotView = (ImageView) homeView.findViewById(R.id.snapshotView);
+
+        snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
+
+
+
+
+
+
+
+
+
 
         if (!AWSMobileClient.defaultMobileClient().getIdentityManager().isUserSignedIn()) {
             // In the case that the activity is restarted by the OS after the application
@@ -336,10 +388,7 @@ public class PubSubActivity extends AppCompatActivity {
          btnDisconnect.setOnClickListener(disconnectClick);
          */
 
-        mqttButton = (Button) findViewById(R.id.mqttButton);
-        mqttButton.setOnClickListener(connectClick);
-        mqttButton.setEnabled(false);
-        mqttButton.setText("Arm");
+
 
         // MQTT client IDs are required to be unique per AWS IoT account.
         // This UUID is "practically unique" but does not _guarantee_
@@ -371,10 +420,13 @@ public class PubSubActivity extends AppCompatActivity {
         // MQTT Client
         mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
 
+        //s3 = new AmazonS3Client(credentialsProvider);
+
 
         // The following block uses IAM user credentials for authentication with AWS IoT.
         //awsCredentials = new BasicAWSCredentials("ACCESS_KEY_CHANGE_ME", "SECRET_KEY_CHANGE_ME");
         //btnConnect.setEnabled(true);
+
 
         // The following block uses a Cognito credentials provider for authentication with AWS IoT.
         new Thread(new Runnable() {
@@ -393,7 +445,76 @@ public class PubSubActivity extends AppCompatActivity {
             }
         }).start();
 
+
     }
+    private boolean isNewImageAvailable( AmazonS3Client s3,
+                                         String imageName,
+                                         String bucketName ) {
+        File file = new File( this.getApplicationContext().getFilesDir(),
+                imageName );
+        if ( !file.exists() ) {
+            return true;
+        }
+
+        ObjectMetadata metadata = s3.getObjectMetadata( bucketName,
+                imageName );
+        long remoteLastModified = metadata.getLastModified().getTime();
+
+        if ( file.lastModified() < remoteLastModified ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    private void getRemoteImage( AmazonS3Client s3,
+                                 String imageName,
+                                 String bucketName ) {
+        S3Object object = s3.getObject( bucketName, imageName );
+        this.storeImageLocally( object.getObjectContent(), imageName );
+    }
+
+    private void storeImageLocally( InputStream stream,
+                                    String imageName ) {
+        FileOutputStream outputStream;
+        try {
+            outputStream = openFileOutput( imageName,
+                    Context.MODE_PRIVATE);
+
+            int length = 0;
+            byte[] buffer = new byte[1024];
+            while ( ( length = stream.read( buffer ) ) > 0 ) {
+                outputStream.write( buffer, 0, length );
+            }
+
+            outputStream.close();
+        }
+        catch ( Exception e ) {
+            Log.d( "Store Image", "Can't store image : " + e );
+        }
+    }
+
+    private void displayImage( ImageView view,
+                               AmazonS3Client s3,
+                               String imageName,
+                               String bucketName ) {
+        if ( this.isNewImageAvailable( s3, imageName, bucketName ) ) {
+            this.getRemoteImage( s3, imageName, bucketName );
+        }
+
+        InputStream stream = this.getLocalImage( imageName );
+        view.setImageDrawable( Drawable.createFromStream( stream, "src" ) );
+    }
+    private InputStream getLocalImage( String imageName ) {
+        try {
+            return openFileInput( imageName );
+        }
+        catch ( FileNotFoundException exception ) {
+            return null;
+        }
+    }
+
+
     /**
      private CognitoCachingCredentialsProvider getCredentialsProvider() {
      return credentialsProvider;
@@ -406,18 +527,37 @@ public class PubSubActivity extends AppCompatActivity {
      */
 
 
-    View.OnClickListener connectClick = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+    //View.OnClickListener connectClick = new View.OnClickListener() {
+       // @Override
+        public void connectClick() {
 
-            Log.d(LOG_TAG, "clientId = " + clientId);
 
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                    final AmazonS3Client s3 = new AmazonS3Client(credentialsProvider);
+
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+                            StrictMode.setThreadPolicy(policy);
+                            displayImage(snapshotView, s3, "ic_menu.png", "latest-snapshot");
+                            mqttButton.setEnabled(true);
+                        }
+                    });
+                }
+            }).start();
             //ClientConfiguration clientConfiguration = new ClientConfiguration();
             //IdentityManager identityManager = new IdentityManager(getApplicationContext(), clientConfiguration);
 
 
             try {
                 mqttManager.connect(credentialsProvider, new AWSIotMqttClientStatusCallback() {
+
                     @Override
                     public void onStatusChanged(final AWSIotMqttClientStatus status,
                                                 final Throwable throwable) {
@@ -506,7 +646,8 @@ public class PubSubActivity extends AppCompatActivity {
                     Log.e(LOG_TAG, "Subscription error.", e);
                 }
 
-        };
+        }
+
 
 
         public boolean getArmStatus() {
@@ -555,5 +696,104 @@ public class PubSubActivity extends AppCompatActivity {
 
             }
         };
+   // };
+    /**
+     * Stores data to be passed between fragments.
+     * @param fragmentBundle fragment data
+     */
+    public void setFragmentBundle(final Bundle fragmentBundle) {
+        this.fragmentBundle = fragmentBundle;
+    }
+
+    /**
+     * Gets data to be passed between fragments.
+     * @return fragmentBundle fragment data
+     */
+    public Bundle getFragmentBundle() {
+        return this.fragmentBundle;
+    }
+
+    public boolean onOptionsItemSelected(final MenuItem item) {
+        // Handle action bar item clicks here excluding the home button.
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState(final Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        // Save the title so it will be restored properly to match the view loaded when rotation
+        // was changed or in case the activity was destroyed.
+        if (toolbar != null) {
+            bundle.putCharSequence(BUNDLE_KEY_TOOLBAR_TITLE, toolbar.getTitle());
+        }
+    }
+
+    //@Override
+    public void onClick(final View view) {
+        if (view == signOutButton) {
+            // The user is currently signed in with a provider. Sign out of that provider.
+            identityManager.signOut();
+            startActivity(new Intent(this, SignInActivity.class));
+            finish();
+            return;
+        }
+
+        /**if (view == mqttButton) {
+         // The user is to send a payload over MQTT
+         // metodenavn(parametersomskalsendes, adresse)
+
+         }*/
+        // ... add any other button handling code here ...
+
+    }
+
+    private final BroadcastReceiver settingsChangedReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d(LOG_TAG, "Received settings changed local broadcast. Update theme colors.");
+            updateColor();
+        }
     };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(settingsChangedReceiver);
+    }
+
+    @Override
+    public void onBackPressed() {
+        final FragmentManager fragmentManager = this.getSupportFragmentManager();
+
+        if (navigationDrawer.isDrawerOpen()) {
+            navigationDrawer.closeDrawer();
+            return;
+        }
+
+        if (fragmentManager.getBackStackEntryCount() == 0) {
+            if (fragmentManager.findFragmentByTag(HomeDemoFragment.class.getSimpleName()) == null) {
+                final Class fragmentClass = HomeDemoFragment.class;
+                // if we aren't on the home fragment, navigate home.
+                final Fragment fragment = Fragment.instantiate(this, fragmentClass.getName());
+
+                fragmentManager
+                        .beginTransaction()
+                        .replace(R.id.main_fragment_container, fragment, fragmentClass.getSimpleName())
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit();
+
+                // Set the title for the fragment.
+                final ActionBar actionBar = this.getSupportActionBar();
+                if (actionBar != null) {
+                    actionBar.setTitle(
+                            getString(R.string.app_name));
+                }
+                return;
+            }
+        }
+        super.onBackPressed();
+    }
+
 }

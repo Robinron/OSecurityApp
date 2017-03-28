@@ -428,7 +428,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // Set the title for the fragment.
                 final ActionBar actionBar = this.getSupportActionBar();
                 if (actionBar != null) {
-                    actionBar.setTitle(getString(R.string.app_name));
+                    actionBar.setTitle(
+                            getString(R.string.app_name));
                 }
                 return;
             }
