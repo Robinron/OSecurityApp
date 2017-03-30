@@ -38,49 +38,30 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.ClientConfiguration;
-import com.amazonaws.auth.AWSBasicCognitoIdentityProvider;
 import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.mobile.AWSMobileClient;
-import com.amazonaws.mobile.content.ContentManager;
 import com.amazonaws.mobile.user.IdentityManager;
-import com.amazonaws.mobile.user.IdentityProvider;
-import com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider;
-import com.amazonaws.mobileconnectors.cognito.CognitoSyncManager;
 import com.amazonaws.mobileconnectors.cognito.Dataset;
 import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoDevice;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.ChallengeContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.MultiFactorAuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoRefreshToken;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoUserToken;
-import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
-import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 
 import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType;
-import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.S3Object;
 import com.mysampleapp.demo.DemoConfiguration;
@@ -88,23 +69,13 @@ import com.mysampleapp.demo.HomeDemoFragment;
 import com.mysampleapp.demo.UserSettings;
 import com.mysampleapp.navigation.NavigationDrawer;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
-
-import javax.xml.datatype.Duration;
-
 
 
 public class PubSubActivity extends AppCompatActivity {
@@ -142,7 +113,17 @@ public class PubSubActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
 
-   // private AmazonS3Client s3;
+    // Customer specific IoT endpoint
+    // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com,
+    private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a3enni6esrlrke.iot.eu-west-1.amazonaws.com";
+    // Cognito pool ID. For this app, pool needs to be unauthenticated pool with
+    // AWS IoT permissions.
+    private static final String COGNITO_POOL_ID = "eu-west-1:b3aade10-c009-40ed-94f7-422c4134f298";
+
+    // Region of AWS IoT
+    private static final Regions MY_REGION = Regions.EU_WEST_1;
+
+    private AmazonS3Client s3;
 
     /**
      * Our navigation drawer class for handling navigation drawer logic.
@@ -161,41 +142,11 @@ public class PubSubActivity extends AppCompatActivity {
 
     private Button signOutButton;
 
-    private ImageView snapshotView;
-
-    // Customer specific IoT endpoint
-    // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com,
-    private static final String CUSTOMER_SPECIFIC_ENDPOINT = "a3enni6esrlrke.iot.eu-west-1.amazonaws.com";
-    // Cognito pool ID. For this app, pool needs to be unauthenticated pool with
-    // AWS IoT permissions.
-    private static final String COGNITO_POOL_ID = "eu-west-1:b3aade10-c009-40ed-94f7-422c4134f298";
-
-    // Region of AWS IoT
-    private static final Regions MY_REGION = Regions.EU_WEST_1;
-
-
-    EditText txtSubcribe;
-    EditText txtTopic;
-    EditText txtMessage;
-    private Button mqttButton;
-    TextView tvLastMessage;
-    TextView tvClientId;
-    TextView tvStatus;
-
-    Button btnConnect;
-    Button btnSubscribe;
-    Button btnPublish;
-    Button btnDisconnect;
-
-    AWSIotMqttManager mqttManager;
-    String clientId;
 
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
 
-    boolean isArmed = false;
 
-    String msg;
 
 
     /**
@@ -226,6 +177,9 @@ public class PubSubActivity extends AppCompatActivity {
         //signOutButton.setOnClickListener(this);
 
     }
+
+
+
 
     /**
      * Initializes the navigation drawer menu to allow toggling via the toolbar or swipe from the
@@ -322,21 +276,14 @@ public class PubSubActivity extends AppCompatActivity {
 
         setupNavigationMenu(savedInstanceState);
 
-        LayoutInflater inflater = this.getLayoutInflater();
-        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
-        View homeView = inflater.inflate(R.layout.fragment_demo_home , viewGroup);
-        mqttButton = (Button) homeView.findViewById(R.id.mqttButton);
+        //LayoutInflater inflater = this.getLayoutInflater();
+        //ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
+        //View homeView = inflater.inflate(R.layout.fragment_demo_home , viewGroup);
 
-        mqttButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                connectClick();
-                Log.d(LOG_TAG, "BUTTON IS CLICKED!");
-            }
-        });
 
-        snapshotView = (ImageView) homeView.findViewById(R.id.snapshotView);
+        //snapshotView = (ImageView) homeView.findViewById(R.id.snapshotView);
 
-        snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
+        //snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
 
 
 
@@ -375,7 +322,7 @@ public class PubSubActivity extends AppCompatActivity {
          tvStatus = (TextView) findViewById(R.id.tvStatus);
 
          btnConnect = (Button) findViewById(R.id.btnConnect);
-         btnConnect.setOnClickListener(connectClick);
+         btnConnect.setOnClickListener(handleS3);
          btnConnect.setEnabled(false);
 
          btnSubscribe = (Button) findViewById(R.id.btnSubscribe);
@@ -390,13 +337,11 @@ public class PubSubActivity extends AppCompatActivity {
 
 
 
+
         // MQTT client IDs are required to be unique per AWS IoT account.
         // This UUID is "practically unique" but does not _guarantee_
         // uniqueness.
-        clientId = UUID.randomUUID().toString();
         // tvClientId.setText(clientId);
-
-        // Initialize the AWS Cognito credentials provider
 
 
         //TODO Fix NotAuthorizedException by using "setLogins" earlier
@@ -417,8 +362,6 @@ public class PubSubActivity extends AppCompatActivity {
 
         Region region = Region.getRegion(MY_REGION);
 
-        // MQTT Client
-        mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
 
         //s3 = new AmazonS3Client(credentialsProvider);
 
@@ -433,86 +376,58 @@ public class PubSubActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                awsCredentials = credentialsProvider.getCredentials();
+                //@awsCredentials = credentialsProvider.getCredentials();
 
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        mqttButton.setEnabled(true);
                     }
                 });
             }
         }).start();
 
 
-    }
-    private boolean isNewImageAvailable( AmazonS3Client s3,
-                                         String imageName,
-                                         String bucketName ) {
-        File file = new File( this.getApplicationContext().getFilesDir(),
-                imageName );
-        if ( !file.exists() ) {
-            return true;
-        }
+        //handleS3();
 
-        ObjectMetadata metadata = s3.getObjectMetadata( bucketName,
-                imageName );
-        long remoteLastModified = metadata.getLastModified().getTime();
-
-        if ( file.lastModified() < remoteLastModified ) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    private void getRemoteImage( AmazonS3Client s3,
-                                 String imageName,
-                                 String bucketName ) {
-        S3Object object = s3.getObject( bucketName, imageName );
-        this.storeImageLocally( object.getObjectContent(), imageName );
     }
 
-    private void storeImageLocally( InputStream stream,
-                                    String imageName ) {
-        FileOutputStream outputStream;
-        try {
-            outputStream = openFileOutput( imageName,
-                    Context.MODE_PRIVATE);
+    private static final class DemoListAdapter extends ArrayAdapter<DemoConfiguration.DemoFeature> {
+        private LayoutInflater inflater;
 
-            int length = 0;
-            byte[] buffer = new byte[1024];
-            while ( ( length = stream.read( buffer ) ) > 0 ) {
-                outputStream.write( buffer, 0, length );
+        public DemoListAdapter(final Context context) {
+            super(context, R.layout.list_item_icon_text_with_subtitle);
+            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+
+        @Override
+        public View getView(final int position, final View convertView, final ViewGroup parent) {
+            View view;
+            HomeDemoFragment.ViewHolder holder;
+            if (convertView == null) {
+                view = inflater.inflate(R.layout.list_item_icon_text_with_subtitle, parent, false);
+                holder = new HomeDemoFragment.ViewHolder();
+                holder.iconImageView = (ImageView) view.findViewById(R.id.list_item_icon);
+                holder.titleTextView = (TextView) view.findViewById(R.id.list_item_title);
+                holder.subtitleTextView = (TextView) view.findViewById(R.id.list_item_subtitle);
+                view.setTag(holder);
+            } else {
+                view = convertView;
+                holder = (HomeDemoFragment.ViewHolder) convertView.getTag();
             }
 
-            outputStream.close();
-        }
-        catch ( Exception e ) {
-            Log.d( "Store Image", "Can't store image : " + e );
+            DemoConfiguration.DemoFeature item = getItem(position);
+            holder.iconImageView.setImageResource(item.iconResId);
+            holder.titleTextView.setText(item.titleResId);
+            holder.subtitleTextView.setText(item.subtitleResId);
+
+            return view;
         }
     }
 
-    private void displayImage( ImageView view,
-                               AmazonS3Client s3,
-                               String imageName,
-                               String bucketName ) {
-        if ( this.isNewImageAvailable( s3, imageName, bucketName ) ) {
-            this.getRemoteImage( s3, imageName, bucketName );
-        }
 
-        InputStream stream = this.getLocalImage( imageName );
-        view.setImageDrawable( Drawable.createFromStream( stream, "src" ) );
-    }
-    private InputStream getLocalImage( String imageName ) {
-        try {
-            return openFileInput( imageName );
-        }
-        catch ( FileNotFoundException exception ) {
-            return null;
-        }
-    }
+
+
 
 
     /**
@@ -527,176 +442,8 @@ public class PubSubActivity extends AppCompatActivity {
      */
 
 
-    //View.OnClickListener connectClick = new View.OnClickListener() {
-       // @Override
-        public void connectClick() {
 
 
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-
-                    final AmazonS3Client s3 = new AmazonS3Client(credentialsProvider);
-
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-                            StrictMode.setThreadPolicy(policy);
-                            displayImage(snapshotView, s3, "ic_menu.png", "latest-snapshot");
-                            mqttButton.setEnabled(true);
-                        }
-                    });
-                }
-            }).start();
-            //ClientConfiguration clientConfiguration = new ClientConfiguration();
-            //IdentityManager identityManager = new IdentityManager(getApplicationContext(), clientConfiguration);
-
-
-            try {
-                mqttManager.connect(credentialsProvider, new AWSIotMqttClientStatusCallback() {
-
-                    @Override
-                    public void onStatusChanged(final AWSIotMqttClientStatus status,
-                                                final Throwable throwable) {
-                        Log.d(LOG_TAG, "Status = " + String.valueOf(status));
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (status == AWSIotMqttClientStatus.Connecting) {
-                                    //tvStatus.setText("Connecting...");
-
-                                } else if (status == AWSIotMqttClientStatus.Connected) {
-                                    mqttButton.setClickable(false);
-                                    publish();
-                                    subscribe();
-
-                                } else if (status == AWSIotMqttClientStatus.Reconnecting) {
-                                    if (throwable != null) {
-                                        Log.e(LOG_TAG, "Connection error.", throwable);
-                                    }
-                                    //tvStatus.setText("Reconnecting");
-                                } else if (status == AWSIotMqttClientStatus.ConnectionLost) {
-                                    if (throwable != null) {
-                                        Log.e(LOG_TAG, "Connection error.", throwable);
-                                        throwable.printStackTrace();
-                                    }
-                                    //tvStatus.setText("Disconnected");
-                                } else {
-                                    //tvStatus.setText("Disconnected");
-
-                                }
-                            }
-                        });
-                    }
-                });
-            } catch (final Exception e) {
-                Log.e(LOG_TAG, "Connection error.", e);
-                // tvStatus.setText("Error! " + e.getMessage());
-            }
-        }
-
-
-        public void subscribe(){
-                final String topic = "/osecurity/fromterminal";
-
-                Log.d(LOG_TAG, "topic = " + topic);
-
-                try {
-                    mqttManager.subscribeToTopic(topic, AWSIotMqttQos.QOS0,
-                            new AWSIotMqttNewMessageCallback() {
-                                @Override
-                                public void onMessageArrived(final String topic, final byte[] data) {
-                                    runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            try {
-                                                String message = new String(data);
-
-
-                                                Log.d(LOG_TAG, "Message arrived:");
-                                                Log.d(LOG_TAG, "   Topic: " + topic);
-                                                Log.d(LOG_TAG, " Message: " + message);
-
-                                                if (message.equals("armed")) {
-                                                    mqttButton.setClickable(true);
-                                                    mqttButton.setText("Deaktiver");
-                                                } else if (message.equals("disarmed")) {
-                                                    mqttButton.setClickable(true);
-                                                    mqttButton.setText("Aktiver");
-                                                } else if (message.equals("Terminal er online")) {
-                                                    Log.d(LOG_TAG, "Terminal er online, funker");
-                                                    Toast toast = Toast.makeText(getApplicationContext(), "Terminal er online!", Toast.LENGTH_SHORT);
-                                                    toast.show();
-                                                } else {
-                                                    Log.d(LOG_TAG, "Unsupported input from Pi");
-                                                }
-
-                                            } catch (NullPointerException e) {
-                                                Log.e(LOG_TAG, "NullPointerException", e);
-                                            }
-                                        }
-                                    });
-                                }
-                            });
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Subscription error.", e);
-                }
-
-        }
-
-
-
-        public boolean getArmStatus() {
-            return isArmed;
-        }
-
-        public void switchArmStatus() {
-            if (isArmed = true) {
-                isArmed = false;
-            } else if (isArmed = false) {
-                isArmed = true;
-            }
-        }
-
-        public void publish() {
-
-            String fromApp = "/osecurity/fromapp";
-            if (isArmed) {
-                msg = "n";
-                isArmed = false;
-            } else if (!isArmed) {
-                msg = "y";
-                isArmed = true;
-            }
-
-            try {
-                mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
-            } catch (Exception e) {
-                Log.e(LOG_TAG, "Publish error.", e);
-            }
-
-
-        }
-
-        ;
-
-        View.OnClickListener disconnectClick = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    mqttManager.disconnect();
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Disconnect error.", e);
-                }
-
-            }
-        };
-   // };
     /**
      * Stores data to be passed between fragments.
      * @param fragmentBundle fragment data
