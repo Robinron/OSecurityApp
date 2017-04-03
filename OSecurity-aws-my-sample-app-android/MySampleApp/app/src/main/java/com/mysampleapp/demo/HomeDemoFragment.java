@@ -27,16 +27,24 @@ import android.widget.Toast;
 import java.io.FileOutputStream;
 
 
+import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.mobile.AWSMobileClient;
+import com.amazonaws.mobile.content.ContentManager;
+import com.amazonaws.mobile.user.IdentityManager;
+import com.amazonaws.mobile.user.IdentityProvider;
+import com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider;
 import com.amazonaws.mobileconnectors.cognito.Dataset;
 import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
+import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType;
 import com.amazonaws.services.s3.AmazonS3Client;
@@ -78,15 +86,23 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
     AWSIotMqttManager mqttManager;
     String clientId;
+    private AmazonS3Client s3;
+    private IdentityManager identityManager;
+    private IdentityProvider identityProvider;
+    private CognitoCachingCredentialsProvider credentialsProvider;
 
     AWSCredentials awsCredentials;
-    CognitoCachingCredentialsProvider credentialsProvider;
+
 
     boolean isArmed = false;
 
     private Toolbar toolbar;
 
     String msg;
+
+    CognitoUserSession cognitoUserSession;
+
+
 
 
     public void updateColor() {
@@ -134,6 +150,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     }
 
 
+
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              final Bundle savedInstanceState) {
@@ -149,23 +166,31 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         clientId = UUID.randomUUID().toString();
 
 
+
         syncUserSettings();
 
-        //TODO Fix NotAuthorizedException by using "setLogins" earlier
-        AuthenticationResultType authenticationResultType = new AuthenticationResultType();
-        String idToken = authenticationResultType.getIdToken();
+
+        //CognitoUserPoolsSignInProvider provider = new CognitoUserPoolsSignInProvider(getContext());
+        //cognitoUserSession = provider.getCognitoUserSession();
+
+       // String idToken = cognitoUserSession.getIdToken().getJWTToken();
+
 
         //Initialize the AWS Cognito credentials provider
 
-        credentialsProvider = new CognitoCachingCredentialsProvider(
-                getActivity(),
-                COGNITO_POOL_ID,
-                MY_REGION
-        );
 
-        Map<String, String> logins = new HashMap<String, String>();
-        logins.put("eu-west-1_2F3hyifQN", idToken);
-        credentialsProvider.setLogins(logins);
+        identityManager = AWSMobileClient.defaultMobileClient()
+                .getIdentityManager();
+
+        identityProvider = identityManager.getCurrentIdentityProvider();
+
+
+
+
+
+        s3 = new AmazonS3Client(identityManager.getCredentialsProvider());
+
+
 
         // MQTT Client
         mqttManager = new AWSIotMqttManager(clientId, CUSTOMER_SPECIFIC_ENDPOINT);
@@ -177,7 +202,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             @Override
             public void run() {
 
-                awsCredentials = credentialsProvider.getCredentials();
+                awsCredentials = identityManager.getCredentialsProvider().getCredentials();
 
 
                 getActivity().runOnUiThread(new Runnable() {
@@ -187,6 +212,27 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 });
             }
         }).start();
+
+
+        s3Snapshot();
+
+        //TODO Fix NotAuthorizedException by using "setLogins" earlier
+       // AuthenticationResultType authenticationResultType = new AuthenticationResultType();
+
+
+        /**
+        credentialsProvider = new CognitoCachingCredentialsProvider(
+                getActivity(),
+                COGNITO_POOL_ID,
+                MY_REGION
+        );
+         */
+
+
+       // logins.put("eu-west-1_2F3hyifQN", idToken);
+
+       // credentialsProvider.setLogins(logins);
+
 
         return view;
     }
@@ -284,7 +330,14 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         public TextView titleTextView;
         public TextView subtitleTextView;
     }
+    public void s3Snapshot() {
 
+        final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
+        //s3.getObject("latest-snapshot", "knapp.JPG");
+        displayImage(snapshotView, s3, "knapp.JPG", "latest-snapshot");
+    }
     public void connectClick() {
 
 
@@ -292,16 +345,15 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             @Override
             public void run() {
 
-                final AmazonS3Client s3 = new AmazonS3Client(credentialsProvider);
 
 
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-                        StrictMode.setThreadPolicy(policy);
-                        displayImage(snapshotView, s3, "ic_menu.png", "latest-snapshot");
+                        //final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+                        //StrictMode.setThreadPolicy(policy);
+                        //s3.getObject("latest-snapshot", "knapp.JPG");
+                        //displayImage(snapshotView, s3, "knapp.JPG", "latest-snapshot");
                         mqttButton.setEnabled(true);
                     }
                 });
@@ -311,6 +363,20 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
         try {
+            //TODO Refactore for å knytte MQTT credentials til en spesifikk bruker ved bruk av identitymanager og identitytprovider
+            AuthenticationResultType authenticationResultType = new AuthenticationResultType();
+            String idToken = authenticationResultType.getIdToken();
+
+
+            Map<String, String> logins = new HashMap<String, String>();
+            logins.put("eu-west-1_2F3hyifQN", idToken);
+            credentialsProvider = new CognitoCachingCredentialsProvider(
+                    getActivity(),
+                    COGNITO_POOL_ID,
+                    MY_REGION
+            );
+            credentialsProvider.setLogins(logins);
+
             mqttManager.connect(credentialsProvider, new AWSIotMqttClientStatusCallback() {
 
                 @Override
@@ -326,12 +392,23 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
                             } else if (status == AWSIotMqttClientStatus.Connected) {
                                 mqttButton.setClickable(false);
+                                Log.d(LOG_TAG, credentialsProvider.getCredentials().toString());
                                 publish();
                                 subscribe();
 
                             } else if (status == AWSIotMqttClientStatus.Reconnecting) {
                                 if (throwable != null) {
                                     Log.e(LOG_TAG, "Connection error.", throwable);
+                                }
+                                else {
+                                    Log.d(LOG_TAG, "Credentials are: " + identityManager.getCredentialsProvider().getCredentials());
+                                    Log.d(LOG_TAG, "User name is: " + identityManager.getUserName());
+                                    if (identityManager.isUserSignedIn() == true) {
+                                        Log.d(LOG_TAG, "IdentityManager checked logins, user is signed in");
+                                    }
+                                    else {
+                                        Log.d(LOG_TAG, "Not signed in!");
+                                    }
                                 }
                                 //tvStatus.setText("Reconnecting");
                             } else if (status == AWSIotMqttClientStatus.ConnectionLost) {
@@ -459,28 +536,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     //View.OnClickListener handleS3 = new View.OnClickListener() {
     // @Override
     //TODO Refactor til kun å håndtere S3, mqtt tas på HomeDemoFragment
-    public void handleS3() {
 
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                final AmazonS3Client s3 = new AmazonS3Client(credentialsProvider);
-
-
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        final StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-                        StrictMode.setThreadPolicy(policy);
-                        displayImage(snapshotView, s3, "ic_menu.png", "latest-snapshot");
-                    }
-                });
-            }
-        }).start();
-    }
 
     public InputStream getLocalImage(String imageName ) {
         try {
