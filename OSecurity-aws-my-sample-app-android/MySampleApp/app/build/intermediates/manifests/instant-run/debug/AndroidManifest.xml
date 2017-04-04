@@ -55,17 +55,6 @@
         See README(https://goo.gl/l4GJaQ) for more.
         -->
 
-        <service android:name="com.mysampleapp.MyFirebaseInstanceIDService" >
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name="com.mysampleapp.MyFirebaseMessagingService" >
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
         <activity
             android:name="com.mysampleapp.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -147,6 +136,17 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/content_delivery_paths" />
         </provider>
+
+        <service android:name="com.mysampleapp.MyFirebaseInstanceIDService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.mysampleapp.MyFirebaseMessagingService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <!-- END - APP CONTENT DELIVERY AND USER DATA STORAGE -->
 

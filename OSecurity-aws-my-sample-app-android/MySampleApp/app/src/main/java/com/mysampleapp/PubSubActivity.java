@@ -76,6 +76,8 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class PubSubActivity extends AppCompatActivity {
@@ -87,6 +89,7 @@ public class PubSubActivity extends AppCompatActivity {
 
     private CognitoIdToken idToken;
 
+    private String firebaseToken;
     /**
      * Cognito access token.
      */
@@ -286,8 +289,17 @@ public class PubSubActivity extends AppCompatActivity {
         //snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
 
 
+        /**
+         * Firebase subscription logic, started on runtime
+         *
+         */
 
+        FirebaseMessaging.getInstance().subscribeToTopic("varsler");
+        String msg = "Subscribed to topic varsler";
+        Log.d(LOG_TAG, msg);
 
+        firebaseToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d(LOG_TAG, firebaseToken);
 
 
 
@@ -361,6 +373,7 @@ public class PubSubActivity extends AppCompatActivity {
         credentialsProvider.setLogins(logins);
 
         Region region = Region.getRegion(MY_REGION);
+
 
 
         //s3 = new AmazonS3Client(credentialsProvider);

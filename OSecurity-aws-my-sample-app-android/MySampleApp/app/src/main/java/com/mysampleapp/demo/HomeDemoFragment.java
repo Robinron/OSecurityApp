@@ -50,6 +50,7 @@ import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResult
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.S3Object;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.mysampleapp.PubSubActivity;
 import com.mysampleapp.R;
 import com.mysampleapp.SplashActivity;
@@ -68,7 +69,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
     private Button mqttButton;
     private ImageView snapshotView;
-
+    private String firebaseToken;
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -185,7 +186,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         identityProvider = identityManager.getCurrentIdentityProvider();
 
+        //Firebase
 
+        firebaseToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d(LOG_TAG, firebaseToken);
 
 
 
@@ -498,6 +502,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
     public void publish() {
 
+        String firebase = "/osecurity/firebase";
+
+
+
         String fromApp = "/osecurity/fromapp";
         if (isArmed) {
             msg = "n";
@@ -509,6 +517,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         try {
             mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
+            mqttManager.publishString(firebaseToken, firebase, AWSIotMqttQos.QOS0);
+            Log.d(LOG_TAG, "firebaseToken: " + firebaseToken + " has been published to: " + firebase);
         } catch (Exception e) {
             Log.e(LOG_TAG, "Publish error.", e);
         }

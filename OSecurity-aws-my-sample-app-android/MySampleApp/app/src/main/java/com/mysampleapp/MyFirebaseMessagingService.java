@@ -41,6 +41,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
     }
 
+
     /**
      * Schedule a job using FirebaseJobDispatcher.
      */
