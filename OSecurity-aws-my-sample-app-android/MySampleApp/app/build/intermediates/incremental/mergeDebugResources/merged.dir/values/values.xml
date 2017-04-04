@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -145,6 +145,7 @@
         </attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction">
             
@@ -365,6 +366,7 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="google_play_services_version">9683000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -400,6 +402,7 @@
     <string name="app_name">OSecurity</string>
     <string name="button_text_sign_in">LOGG INN</string>
     <string name="button_text_sign_out">LOGG UT</string>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. If the problem persists, please contact the developer for assistance.</string>
     <string name="content_cache_available_text">Available</string>
     <string name="content_cache_limit_text">Limit</string>
     <string name="content_cache_pinned_text">Pinned</string>
@@ -431,6 +434,7 @@
     <string name="content_removal_error_text">Content Removal Error</string>
     <string name="content_set_cache_size_text">Set Cache Size</string>
     <string name="content_transfer_failure_text">Transfer Failure</string>
+    <string name="default_web_client_id" translatable="false">249253556344-7g8bgrp20gao1691m4ge2d2uac1gjsvg.apps.googleusercontent.com</string>
     <string name="download_queue_provider_authority">com.amazonaws.mobile.downloader-com.amazon.mysampleapp</string>
     <string name="email_address_text">E-post addresse</string>
     <string name="feature_sign_in_demo_button">Demo User Identity</string>
@@ -446,13 +450,19 @@
     <string name="feature_user_data_storage_powered_by">Powered by Amazon Cognito and Amazon S3</string>
     <string name="feature_user_data_storage_subtitle">Store files for your users in the cloud.\nStore and sync user data in key/value pairs.</string>
     <string name="feature_user_data_storage_title">User Data Storage</string>
+    <string name="firebase_database_url" translatable="false">https://osecuritypush.firebaseio.com</string>
     <string name="forgot_password_body">Sett ditt nye passord med bekreftelseskoden som ble sendt til deg.</string>
     <string name="forgot_password_button_hint">Sett passord</string>
     <string name="forgot_password_header">Glemt passord?</string>
     <string name="forgot_password_input_code_hint">Bekreftelseskode</string>
     <string name="fragment_demo_instruction_description_header">Sample App Features</string>
     <string name="fragment_demo_instruction_overview_header">Overview</string>
+    <string name="gcm_defaultSenderId" translatable="false">249253556344</string>
     <string name="given_name_text">Gitt navn</string>
+    <string name="google_api_key" translatable="false">AIzaSyB_XnroeMLqY0FICtRpkpK7390jRflq6tc</string>
+    <string name="google_app_id" translatable="false">1:249253556344:android:0ed891489004be59</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB_XnroeMLqY0FICtRpkpK7390jRflq6tc</string>
+    <string name="google_storage_bucket" translatable="false">osecuritypush.appspot.com</string>
     <string name="identity_demo_dialog_dismiss_text">DISMISS</string>
     <string name="identity_demo_error_dialog_title">Failed Identity Retrieval</string>
     <string name="identity_demo_error_message_failed_get_identity">Could not retrieve the user identity:\u0020</string>

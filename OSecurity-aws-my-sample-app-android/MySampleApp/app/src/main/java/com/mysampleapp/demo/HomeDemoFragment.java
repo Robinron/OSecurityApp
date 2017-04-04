@@ -104,7 +104,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-
+/**
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getActivity());
         new AsyncTask<Void, Void, Void>() {
@@ -148,6 +148,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             });
         }
     }
+    */
 
 
 
@@ -167,7 +168,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-        syncUserSettings();
+        //syncUserSettings();
 
 
         //CognitoUserPoolsSignInProvider provider = new CognitoUserPoolsSignInProvider(getContext());

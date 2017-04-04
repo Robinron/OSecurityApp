@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-km\\values-km.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 246,
+                    "endOffset": 347
+                },
+                "from": {
+                    "file": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\9.6.0\\res\\values-km\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 343,
+                        "endColumn": 246,
+                        "endOffset": 585
+                    }
+                }
+            }
+        ]
+    }
+]
