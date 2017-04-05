@@ -298,8 +298,8 @@ public class PubSubActivity extends AppCompatActivity {
         String msg = "Subscribed to topic varsler";
         Log.d(LOG_TAG, msg);
 
-        firebaseToken = FirebaseInstanceId.getInstance().getToken();
-        Log.d(LOG_TAG, firebaseToken);
+        //firebaseToken = FirebaseInstanceId.getInstance().getToken();
+        //Log.d(LOG_TAG, firebaseToken);
 
 
 

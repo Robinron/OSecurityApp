@@ -1,54 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="24"
+    api-level="25"
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="1708590079914010"
-    token="-8877302500668854252"
-    verifier="COMPATIBLE" >
+    timestamp="9513447509248"
+    token="5830540801881922955"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1493" />
+        duration="898" />
     <task
         name="instant-run-dex"
-        duration="17" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="49" />
+        duration="580" />
     <task
         name="verifier"
-        duration="7" />
+        duration="111" />
 
     <artifact
-        location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="1706015891753591"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="9513447509248"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\outputs\apk\app-debug.apk"
+            location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1708239917252398"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="1708590079914010"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

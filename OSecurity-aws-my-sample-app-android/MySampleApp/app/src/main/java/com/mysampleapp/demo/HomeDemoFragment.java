@@ -70,6 +70,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     private Button mqttButton;
     private ImageView snapshotView;
     private String firebaseToken;
+    private String firebaseID;
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -189,7 +190,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         //Firebase
 
         firebaseToken = FirebaseInstanceId.getInstance().getToken();
+        firebaseID = FirebaseInstanceId.getInstance().getId();
         Log.d(LOG_TAG, firebaseToken);
+        Log.d(LOG_TAG, firebaseID);
 
 
 
@@ -462,9 +465,11 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                                         if (message.equals("armed")) {
                                             mqttButton.setClickable(true);
                                             mqttButton.setText("Deaktiver");
+                                            isArmed = true;
                                         } else if (message.equals("disarmed")) {
                                             mqttButton.setClickable(true);
                                             mqttButton.setText("Aktiver");
+                                            isArmed = false;
                                         } else if (message.equals("Terminal er online")) {
                                             Log.d(LOG_TAG, "Terminal er online, funker");
                                             Toast toast = Toast.makeText(getActivity(), "Terminal er online!", Toast.LENGTH_SHORT);
@@ -518,6 +523,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         try {
             mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
             mqttManager.publishString(firebaseToken, firebase, AWSIotMqttQos.QOS0);
+            //TODO Fjern en av disse (den som er gal)
             Log.d(LOG_TAG, "firebaseToken: " + firebaseToken + " has been published to: " + firebase);
         } catch (Exception e) {
             Log.e(LOG_TAG, "Publish error.", e);

@@ -1,373 +1,373 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:16:1-150:12
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:16:1-150:12
 	package
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:17:5-30
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:17:5-30
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:16:11-69
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:16:11-69
 	android:versionCode
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:19:5-67
-MERGED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:20:5-66
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:19:5-67
+MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:19:22-64
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:19:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:20:5-79
-MERGED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:19:5-78
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:20:5-79
+MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:20:22-76
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:20:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:21:5-76
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:21:5-76
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:21:22-73
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:21:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:22:5-80
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:22:5-80
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:22:22-77
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:22:22-77
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:23:5-82
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:22:5-81
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:23:5-82
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:22:5-81
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:23:22-79
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:23:22-79
 service#org.eclipse.paho.android.service.MqttService
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:28:5-29:15
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:28:5-29:15
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:28:14-73
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:28:14-73
 application
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:34:5-149:19
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\AndroidManifest.xml:26:5-20
-MERGED from [com.google.firebase:firebase-messaging:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\AndroidManifest.xml:19:5-29:19
-MERGED from [com.google.firebase:firebase-core:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-core\9.6.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:28:5-50:19
-MERGED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.0\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\AndroidManifest.xml:19:5-21:19
-MERGED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:26:5-40:19
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\AndroidManifest.xml:29:5-20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:34:5-149:19
+MERGED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-messaging:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.6.0/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/AndroidManifest.xml:19:5-21:19
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:26:5-40:19
+MERGED from [com.android.support:support-v4:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:37:9-41
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:37:9-41
 	android:allowBackup
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:35:9-35
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:35:9-35
 	android:icon
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:36:9-43
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:36:9-43
 	android:theme
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:38:9-40
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:38:9-40
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:39:9-51
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:39:9-51
 activity#com.mysampleapp.SplashActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:49:9-57:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:49:9-57:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:51:13-45
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:51:13-45
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:52:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:52:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:50:13-43
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:50:13-43
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:53:13-56:29
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:53:13-56:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:54:17-69
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:54:17-69
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:54:25-66
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:54:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:55:17-77
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:55:17-77
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:55:27-74
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:55:27-74
 activity#com.mysampleapp.SignInActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:58:9-63:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:58:9-63:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:60:13-59
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:60:13-59
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:61:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:61:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:59:13-43
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:59:13-43
 activity#com.mysampleapp.demo.userpools.ForgotPasswordActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:64:9-69:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:64:9-69:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:66:13-67
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:66:13-67
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:67:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:67:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:65:13-66
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:65:13-66
 activity#com.mysampleapp.demo.userpools.SignUpActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:70:9-75:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:70:9-75:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:72:13-59
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:72:13-59
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:73:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:73:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:71:13-58
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:71:13-58
 activity#com.mysampleapp.demo.userpools.MFAActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:76:9-81:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:76:9-81:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:78:13-55
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:78:13-55
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:79:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:79:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:77:13-55
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:77:13-55
 activity#com.mysampleapp.demo.userpools.SignUpConfirmActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:82:9-87:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:82:9-87:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:84:13-67
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:84:13-67
 	android:configChanges
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:85:13-83
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:85:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:83:13-65
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:83:13-65
 activity#com.mysampleapp.PubSubActivity
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:88:9-92:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:88:9-92:20
 	android:label
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:91:13-56
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:91:13-56
 	android:launchMode
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:90:13-48
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:90:13-48
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:89:13-43
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:89:13-43
 service#com.amazonaws.mobileconnectors.s3.transferutility.TransferService
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:102:9-124
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:102:9-124
 	android:enabled
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:102:99-121
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:102:99-121
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:102:18-98
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:102:18-98
 service#com.amazonaws.mobile.downloader.service.DownloadService
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:104:9-91
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:104:9-91
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:104:18-88
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:104:18-88
 receiver#com.amazonaws.mobile.downloader.service.NetworkStateListener
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:106:9-112:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:106:9-112:20
 	android:enabled
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:108:19-42
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:108:19-42
 	android:exported
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:107:19-43
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:107:19-43
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:106:19-94
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:106:19-94
 intent-filter#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:109:13-111:29
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:109:13-111:29
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:110:17-78
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:110:17-78
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:110:25-76
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:110:25-76
 provider#com.amazonaws.mobile.downloader.query.DownloadQueueProvider
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:114:9-119:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:114:9-119:20
 	android:authorities
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:116:13-76
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:116:13-76
 	android:enabled
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:117:13-35
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:117:13-35
 	android:exported
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:118:13-37
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:118:13-37
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:115:6-80
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:115:6-80
 provider#android.support.v4.content.FileProvider
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:121:9-129:20
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:121:9-129:20
 	android:authorities
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:123:13-74
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:123:13-74
 	android:grantUriPermissions
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:125:13-47
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:125:13-47
 	android:exported
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:124:13-37
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:124:13-37
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:122:13-67
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:122:13-67
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:126:13-128:66
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:126:13-128:66
 	android:resource
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:128:17-63
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:128:17-63
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:127:17-67
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:127:17-67
 service#com.mysampleapp.MyFirebaseInstanceIDService
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:131:9-136:19
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:131:9-136:19
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:132:13-56
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:132:13-56
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:133:13-135:29
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:133:13-135:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:134:17-79
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:134:17-79
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:134:25-77
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:134:25-77
 service#com.mysampleapp.MyFirebaseMessagingService
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:138:9-143:19
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:138:9-143:19
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:139:13-55
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:139:13-55
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:140:13-142:29
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:140:13-142:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:141:17-77
+ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:141:17-77
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:141:25-75
+		ADDED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml:141:25-75
 uses-sdk
-INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.google.firebase:firebase-messaging:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\AndroidManifest.xml:17:5-42
-MERGED from [com.google.firebase:firebase-core:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-core\9.6.0\AndroidManifest.xml:4:5-42
-MERGED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:17:5-42
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:17:5-42
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:17:5-42
-MERGED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.0\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\AndroidManifest.xml:17:5-42
-MERGED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-messaging:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.6.0/AndroidManifest.xml:4:5-42
+MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.0/AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/AndroidManifest.xml:17:5-42
+MERGED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/AndroidManifest.xml:26:9-47
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\AndroidManifest.xml:23:9-27:19
+ADDED from [com.google.firebase:firebase-messaging:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/AndroidManifest.xml:23:9-27:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\AndroidManifest.xml:23:88-111
+		ADDED from [com.google.firebase:firebase-messaging:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/AndroidManifest.xml:23:88-111
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.0\AndroidManifest.xml:23:18-87
+		ADDED from [com.google.firebase:firebase-messaging:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.0/AndroidManifest.xml:23:18-87
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:21:5-67
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:22:22-65
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:22:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:27:162-184
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.0\AndroidManifest.xml:27:7-137
+ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.0/AndroidManifest.xml:27:7-137
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:32:88-110
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:32:88-110
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:32:111-135
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:32:111-135
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.0\AndroidManifest.xml:32:16-87
+		ADDED from [com.google.firebase:firebase-analytics:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.0/AndroidManifest.xml:32:16-87
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:24:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:24:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:24:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:26:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:26:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:30:9-36:20
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:30:9-36:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:30:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:30:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:30:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:31:13-35:29
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:31:13-35:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:32:17-80
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:32:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:32:25-78
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:32:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:33:17-85
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:33:17-85
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:33:25-83
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:33:25-83
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:34:17-60
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:34:17-60
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:34:27-58
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:34:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:40:9-119
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:40:9-119
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:40:93-117
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:40:93-117
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:40:19-92
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:40:19-92
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:44:9-48:19
+ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:44:9-48:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:44:83-106
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:44:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.0\AndroidManifest.xml:44:18-82
+		ADDED from [com.google.firebase:firebase-iid:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.0/AndroidManifest.xml:44:18-82
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:6:9-175
+ADDED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:6:9-175
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:6:125-149
+		ADDED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:6:125-149
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:6:150-173
+		ADDED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:6:150-173
 	android:name
-		ADDED from [com.google.firebase:firebase-common:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.0\AndroidManifest.xml:6:79-124
+		ADDED from [com.google.firebase:firebase-common:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.0/AndroidManifest.xml:6:79-124
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.0\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:9.6.0] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/AndroidManifest.xml:20:20-65
 service#com.firebase.jobdispatcher.GooglePlayReceiver
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:32:9-39:19
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:32:9-39:19
 	android:exported
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:34:13-36
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:34:13-36
 	android:permission
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:35:13-93
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:35:13-93
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:33:13-73
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:33:13-73
 intent-filter#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:36:13-38:29
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:36:13-38:29
 action#com.google.android.gms.gcm.ACTION_TASK_READY
-ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:37:17-87
+ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:37:17-87
 	android:name
-		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.firebase\firebase-jobdispatcher\0.5.2\AndroidManifest.xml:37:25-84
+		ADDED from [com.firebase:firebase-jobdispatcher:0.5.2] /Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.firebase/firebase-jobdispatcher/0.5.2/AndroidManifest.xml:37:25-84
