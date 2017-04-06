@@ -242,6 +242,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
        // credentialsProvider.setLogins(logins);
 
 
+        connectClick();
         return view;
     }
 
@@ -251,7 +252,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             case R.id.mqttButton:
                 Log.d(LOG_TAG, "BUTTON IS CLICKED!");
                 //handleS3();
-                connectClick();
+                publish();
                 break;
             default:
                 break;
@@ -346,6 +347,12 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         //s3.getObject("latest-snapshot", "knapp.JPG");
         displayImage(snapshotView, s3, "knapp.JPG", "latest-snapshot");
     }
+
+    //TODO 1. Må ha inn sjekk som undersøker om terminal er online når app starter
+    //TODO 2. Håndtere om terminal er offline
+    //Todo 3. Firebase ID må sendes SEPARAT fra armering/desarmering, bekreftet at dette virker med IoT console
+    //Todo 4. Alternativ 1: Sleep / delay mellom metodekall. Alternativ 2: Sende token på oppstart (men hva om terminal er offline? Må vi se på thing shadow?)
+    //Todo 5. Alternativ 3: Send MQTT når terminal startes
     public void connectClick() {
 
 
@@ -401,8 +408,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                             } else if (status == AWSIotMqttClientStatus.Connected) {
                                 mqttButton.setClickable(false);
                                 Log.d(LOG_TAG, credentialsProvider.getCredentials().toString());
-                                publish();
                                 subscribe();
+                                checkArmStatus();
+                                //TODO: Dersom terminal er offline når app connecter vil terminal ikke få firebaseID
+                                publishFirebase();
 
                             } else if (status == AWSIotMqttClientStatus.Reconnecting) {
                                 if (throwable != null) {
@@ -437,6 +446,19 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             Log.e(LOG_TAG, "Connection error.", e);
             // tvStatus.setText("Error! " + e.getMessage());
         }
+    }
+
+
+    public void checkArmStatus(){
+        mqttManager.publishString("check", "/osecurity/fromapp", AWSIotMqttQos.QOS0);
+    }
+
+    public void publishFirebase(){
+        String firebase = "/osecurity/firebase";
+
+        mqttManager.publishString(firebaseToken, firebase, AWSIotMqttQos.QOS0);
+
+
     }
 
 
@@ -505,12 +527,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         }
     }
 
+    //TODO: Legge inn alle hardkodede variabler i ressursmappe for ryddighet
     public void publish() {
-
-        String firebase = "/osecurity/firebase";
-
-
-
         String fromApp = "/osecurity/fromapp";
         if (isArmed) {
             msg = "n";
@@ -522,9 +540,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         try {
             mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
-            mqttManager.publishString(firebaseToken, firebase, AWSIotMqttQos.QOS0);
             //TODO Fjern en av disse (den som er gal)
-            Log.d(LOG_TAG, "firebaseToken: " + firebaseToken + " has been published to: " + firebase);
         } catch (Exception e) {
             Log.e(LOG_TAG, "Publish error.", e);
         }

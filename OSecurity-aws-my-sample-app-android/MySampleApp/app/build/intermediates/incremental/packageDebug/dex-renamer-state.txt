@@ -1,4 +1,4 @@
-#Wed Apr 05 12:48:39 CEST 2017
+#Thu Apr 06 11:45:21 CEST 2017
 base.0=/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f63fd2137e56e58f8ddc66c06f530d029cd4a77c
 renamed.1=classes2.dex
 renamed.0=classes.dex
