@@ -163,8 +163,8 @@ public class SplashActivity extends Activity {
      * Go to the main activity after the splash timeout has expired.
      */
     protected void goMain() {
-        Log.d(LOG_TAG, "Launching Main Activity...");
-        goAfterSplashTimeout(new Intent(this, MainActivity.class));
+        Log.d(LOG_TAG, "Launching PubSubActivity...");
+        goAfterSplashTimeout(new Intent(this, PubSubActivity.class));
     }
 
     /**

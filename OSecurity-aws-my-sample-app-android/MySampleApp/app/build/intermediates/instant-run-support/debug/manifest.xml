@@ -18,13 +18,23 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="23" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <service android:name="org.eclipse.paho.android.service.MqttService" >
+    </service>
+    <service
+        android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+        android:enabled="true" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.0" />
 
     <application
         name="com.mysampleapp.Application"
@@ -69,7 +79,7 @@
             android:label="@string/title_activity_sign_up_confirm" >
         </activity>
         <activity
-            android:name="com.mysampleapp.MainActivity"
+            android:name="com.mysampleapp.PubSubActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleInstance" >
         </activity>

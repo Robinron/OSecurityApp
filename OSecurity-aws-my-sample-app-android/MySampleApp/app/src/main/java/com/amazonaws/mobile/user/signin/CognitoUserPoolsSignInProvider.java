@@ -32,6 +32,7 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.Authentic
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.GenericHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
 import com.mysampleapp.R;
 import com.mysampleapp.SignInActivity;
 import com.mysampleapp.demo.userpools.ForgotPasswordActivity;
@@ -149,6 +150,8 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
     /** Active Cognito User Pool. */
     private CognitoUserPool cognitoUserPool;
 
+
+
     /** Active Cognito User Pools session. */
     private CognitoUserSession cognitoUserSession;
 
@@ -242,8 +245,10 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
 
             cognitoUserSession = userSession;
 
+
             if (null != resultsHandler) {
-                ViewHelper.showDialog(activity, activity.getString(title_activity_sign_in),
+                ViewHelper.showDialog(activity,
+                        activity.getString(title_activity_sign_in),
                         activity.getString(login_success) + " " + userSession.getIdToken());
 
                 resultsHandler.onSuccess(CognitoUserPoolsSignInProvider.this);
@@ -251,7 +256,9 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
 
             initializedLatch.countDown();
         }
-
+        public CognitoUserSession getUserSession() {
+            return cognitoUserSession;
+        }
         @Override
         public void getAuthenticationDetails(
                 final AuthenticationContinuation authenticationContinuation, final String userId) {
@@ -506,6 +513,9 @@ public class CognitoUserPoolsSignInProvider implements SignInProvider {
         }
 
         return username;
+    }
+    public CognitoUserSession getCognitoUserSession() {
+        return cognitoUserSession;
     }
 
     /** {@inheritDoc} */
