@@ -50,6 +50,7 @@ import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResult
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.S3Object;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.mysampleapp.PubSubActivity;
 import com.mysampleapp.R;
 import com.mysampleapp.SplashActivity;
@@ -68,7 +69,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
     private Button mqttButton;
     private ImageView snapshotView;
-
+    private String firebaseToken;
+    private String firebaseID;
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -104,7 +106,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-
+/**
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getActivity());
         new AsyncTask<Void, Void, Void>() {
@@ -148,6 +150,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             });
         }
     }
+    */
 
 
 
@@ -167,7 +170,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-        syncUserSettings();
+        //syncUserSettings();
 
 
         //CognitoUserPoolsSignInProvider provider = new CognitoUserPoolsSignInProvider(getContext());
@@ -184,7 +187,12 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         identityProvider = identityManager.getCurrentIdentityProvider();
 
+        //Firebase
 
+        firebaseToken = FirebaseInstanceId.getInstance().getToken();
+        firebaseID = FirebaseInstanceId.getInstance().getId();
+        Log.d(LOG_TAG, firebaseToken);
+        Log.d(LOG_TAG, firebaseID);
 
 
 
@@ -234,6 +242,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
        // credentialsProvider.setLogins(logins);
 
 
+        connectClick();
         return view;
     }
 
@@ -243,7 +252,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             case R.id.mqttButton:
                 Log.d(LOG_TAG, "BUTTON IS CLICKED!");
                 //handleS3();
-                connectClick();
+                publish();
                 break;
             default:
                 break;
@@ -338,6 +347,12 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         //s3.getObject("latest-snapshot", "knapp.JPG");
         displayImage(snapshotView, s3, "knapp.JPG", "latest-snapshot");
     }
+
+    //TODO 1. Må ha inn sjekk som undersøker om terminal er online når app starter
+    //TODO 2. Håndtere om terminal er offline
+    //Todo 3. Firebase ID må sendes SEPARAT fra armering/desarmering, bekreftet at dette virker med IoT console
+    //Todo 4. Alternativ 1: Sleep / delay mellom metodekall. Alternativ 2: Sende token på oppstart (men hva om terminal er offline? Må vi se på thing shadow?)
+    //Todo 5. Alternativ 3: Send MQTT når terminal startes
     public void connectClick() {
 
 
@@ -393,8 +408,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                             } else if (status == AWSIotMqttClientStatus.Connected) {
                                 mqttButton.setClickable(false);
                                 Log.d(LOG_TAG, credentialsProvider.getCredentials().toString());
-                                publish();
                                 subscribe();
+                                checkArmStatus();
+                                //TODO: Dersom terminal er offline når app connecter vil terminal ikke få firebaseID
+                                publishFirebase();
 
                             } else if (status == AWSIotMqttClientStatus.Reconnecting) {
                                 if (throwable != null) {
@@ -432,6 +449,19 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     }
 
 
+    public void checkArmStatus(){
+        mqttManager.publishString("check", "/osecurity/fromapp", AWSIotMqttQos.QOS0);
+    }
+
+    public void publishFirebase(){
+        String firebase = "/osecurity/firebase";
+
+        mqttManager.publishString(firebaseToken, firebase, AWSIotMqttQos.QOS0);
+
+
+    }
+
+
     public void subscribe(){
         final String topic = "/osecurity/fromterminal";
 
@@ -457,9 +487,11 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                                         if (message.equals("armed")) {
                                             mqttButton.setClickable(true);
                                             mqttButton.setText("Deaktiver");
+                                            isArmed = true;
                                         } else if (message.equals("disarmed")) {
                                             mqttButton.setClickable(true);
                                             mqttButton.setText("Aktiver");
+                                            isArmed = false;
                                         } else if (message.equals("Terminal er online")) {
                                             Log.d(LOG_TAG, "Terminal er online, funker");
                                             Toast toast = Toast.makeText(getActivity(), "Terminal er online!", Toast.LENGTH_SHORT);
@@ -495,8 +527,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         }
     }
 
+    //TODO: Legge inn alle hardkodede variabler i ressursmappe for ryddighet
     public void publish() {
-
         String fromApp = "/osecurity/fromapp";
         if (isArmed) {
             msg = "n";
@@ -508,6 +540,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         try {
             mqttManager.publishString(msg, fromApp, AWSIotMqttQos.QOS0);
+            //TODO Fjern en av disse (den som er gal)
         } catch (Exception e) {
             Log.e(LOG_TAG, "Publish error.", e);
         }
