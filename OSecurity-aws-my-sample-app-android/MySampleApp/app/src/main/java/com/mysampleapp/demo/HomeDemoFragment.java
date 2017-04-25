@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
@@ -22,8 +24,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
 import java.io.FileOutputStream;
 
 
@@ -71,6 +76,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
+    private VideoView vidView;
+
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -106,7 +113,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-/**
+
+
+    /**
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getActivity());
         new AsyncTask<Void, Void, Void>() {
@@ -268,6 +277,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         final DemoListAdapter adapter = new DemoListAdapter(getActivity());
         adapter.addAll(DemoConfiguration.getDemoFeatureList());
 
+
+
         //ListView listView = (ListView) view.findViewById(android.R.id.list);
         //listView.setAdapter(adapter);
         /**
@@ -338,6 +349,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         public ImageView iconImageView;
         public TextView titleTextView;
         public TextView subtitleTextView;
+        public VideoView vidView;
     }
     public void s3Snapshot() {
 

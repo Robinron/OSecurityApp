@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -42,8 +43,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 
 import com.amazonaws.auth.AWSCredentials;
@@ -149,6 +152,10 @@ public class PubSubActivity extends AppCompatActivity {
 
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
+
+    private VideoView vidView;
+
+    private MediaController vidControl;
 
 
 
@@ -265,6 +272,22 @@ public class PubSubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
+         * Forsøk på video-view, blir krøll
+         */
+        //TODO: Refactor to be in only a part of the view instead of taking over everything
+        vidView = (VideoView)findViewById(R.id.myVideo);
+        vidControl = new MediaController(this);
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+        //vidControl.setEnabled(false);
+        vidView.setMediaController(vidControl);
+        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        Uri vidUri = Uri.parse(vidAddress);
+        vidView.setVideoURI(vidUri);
+        vidView.setZOrderOnTop(true);
+        vidView.start();
+
 
 
         // Obtain a reference to the mobile client. It is created in the Application class,
@@ -375,6 +398,7 @@ public class PubSubActivity extends AppCompatActivity {
         credentialsProvider.setLogins(logins);
 
         Region region = Region.getRegion(MY_REGION);
+
 
 
 
