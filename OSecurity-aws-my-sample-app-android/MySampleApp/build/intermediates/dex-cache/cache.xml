@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b9d428ca3f8295451b71b56cf61ff44d78a4e1f6">
+        sha1="3453e827da0f8042b921f36475600840c835cf28">
         <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f63fd2137e56e58f8ddc66c06f530d029cd4a77c/classes.dex" />
     </item>
     <item
@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="942740d49e64af90d7a45456136ed2fda7fbeb96">
+        sha1="7ff8e876932ed7563bcda6e8e1b90d2ea3ef3a00">
         <dex dex="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b35a1f0c69b1c93f04dee13dd6afdb25df3dae69/classes.dex" />
     </item>
     <item

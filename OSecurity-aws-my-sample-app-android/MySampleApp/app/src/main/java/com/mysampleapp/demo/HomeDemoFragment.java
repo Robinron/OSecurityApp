@@ -77,6 +77,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     private String firebaseToken;
     private String firebaseID;
     private VideoView vidView;
+    private MediaController vidControl;
 
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
@@ -252,6 +253,23 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
         connectClick();
+
+
+        /**
+         * Forsøk på video-view, blir krøll
+         */
+        //TODO: Refactor to be in only a part of the view instead of taking over everything
+        vidView = (VideoView) view.findViewById(R.id.myVideo);
+        vidControl = new MediaController(getActivity());
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+        //vidControl.setEnabled(false);
+        vidView.setMediaController(vidControl);
+        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        Uri vidUri = Uri.parse(vidAddress);
+        vidView.setVideoURI(vidUri);
+        vidView.setZOrderOnTop(true);
+        vidView.start();
         return view;
     }
 

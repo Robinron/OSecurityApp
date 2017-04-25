@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 25 13:09:56 CEST 2017
+#Tue Apr 25 13:35:20 CEST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/resources-debug.ap_/res/color-v23/abc_tint_edittext.xml

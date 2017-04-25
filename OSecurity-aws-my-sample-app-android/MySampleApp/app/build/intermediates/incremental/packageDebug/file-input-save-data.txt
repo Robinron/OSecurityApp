@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 25 13:10:07 CEST 2017
+#Tue Apr 25 13:35:31 CEST 2017
 210.set=DEX
 282.file=/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/resources-debug.ap_/res/layout/notification_template_lines_media.xml
 14.set=ANDROID_RESOURCE

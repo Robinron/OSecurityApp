@@ -272,21 +272,7 @@ public class PubSubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-         * Forsøk på video-view, blir krøll
-         */
-        //TODO: Refactor to be in only a part of the view instead of taking over everything
-        vidView = (VideoView)findViewById(R.id.myVideo);
-        vidControl = new MediaController(this);
-        vidControl.setAnchorView(vidView);
-        vidControl.setMediaPlayer(vidView);
-        //vidControl.setEnabled(false);
-        vidView.setMediaController(vidControl);
-        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-        Uri vidUri = Uri.parse(vidAddress);
-        vidView.setVideoURI(vidUri);
-        vidView.setZOrderOnTop(true);
-        vidView.start();
+
 
 
 
