@@ -19,6 +19,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -76,7 +78,7 @@ import java.util.UUID;
 public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickListener {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
-    private Button mqttButton;
+    private Button mqttButton, streamingButton;
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
@@ -179,6 +181,11 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         mqttButton = (Button) view.findViewById(R.id.mqttButton);
         mqttButton.setOnClickListener(this);
 
+        streamingButton = (Button) view.findViewById(R.id.streamingButton);
+        streamingButton.setOnClickListener(this);
+
+
+
         snapshotView = (ImageView) view.findViewById(R.id.snapshotView);
         snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
         clientId = UUID.randomUUID().toString();
@@ -261,26 +268,56 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
         /**
-         * Forsøk på video-view, blir krøll
-         */
+         * Forsøk på web-view, funker men åpner chrome for å vise youtube video
+
 
         //TODO: Refactor to be in only a part of the view instead of taking over everything
 
         final WebView webView = (WebView) view.findViewById(R.id.webView);
-        int default_zoom_level=100;
-
-        final String vidAddress = "https://youtu.be/P47bqscizJY";
-
-        webView.setInitialScale(default_zoom_level);
 
         webView.post(new Runnable() {
             @Override
             public void run() {
-                int width = webView.getWidth();
-                int height = webView.getHeight();
-                webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+                //final String vidAddress = "https://youtu.be/P47bqscizJY";
+                final String vidAddress = "https://www.youtube.com/embed/la3tjJRo0W0";
+
+                 //int width = webView.getWidth();
+                 //int height = webView.getHeight();
+                 //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+                webView.loadUrl(vidAddress);
+                webView.setWebChromeClient(new WebChromeClient());
             }
         });
+         */
+
+
+        /**
+         * Kode for å vise youtube video, viser bare at den ikke kan vise
+         *
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+
+        //String vidAddress = "https://www.youtube.com/watch?v=nnQDiGBFIXk";
+        String rsp = "rtsp://r5---sn-5hne6n7e.googlevideo.com/Cj0LENy73wIaNAmk3cJBg-iaXhMYDSANFC149wFZMOCoAUIASARgoLaa5PT-7-1YigELeEpMU181VmVVR0UM/1A671C27615E13183B320B362AE41A1133BD5C42.D29F992A65901F27777307674F66F552D515799C/yt6/1/video.3gp";
+        Uri vidUri = Uri.parse(rsp);
+
+        vidView.setVideoURI(vidUri);
+
+        vidView.setMediaController(vidControl);
+
+        vidView.start();
+         */
+
+        /**
+         * Working solution but opens in chrome with 31s lag
+         * */
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ustream.tv/channel/yyK6Mm9gxRS"));
+        startActivity(intent);
+
 
         /**
         vidView = (VideoView) view.findViewById(R.id.videoView);
@@ -307,6 +344,11 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         return view;
     }
 
+    public void startStream(){
+
+    }
+
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -314,6 +356,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 Log.d(LOG_TAG, "BUTTON IS CLICKED!");
                 //handleS3();
                 publish();
+                break;
+            case R.id.streamingButton:
+                Log.d(LOG_TAG, "Stream button is clicked!");
+                startStream();
                 break;
             default:
                 break;

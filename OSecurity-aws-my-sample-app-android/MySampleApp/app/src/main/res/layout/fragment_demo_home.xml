@@ -11,10 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <WebView
+        <Button
+            android:text="Stream"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/webView"
+            android:id="@+id/streamingButton"
+            android:layout_centerHorizontal="true"/>
+        <VideoView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vidView"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/snapshotView"/>
 
