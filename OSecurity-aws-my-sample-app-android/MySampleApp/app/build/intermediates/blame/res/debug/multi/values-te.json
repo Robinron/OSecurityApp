@@ -7,17 +7,17 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 105,
-                    "endColumn": 226,
-                    "endOffset": 327
+                    "endColumn": 198,
+                    "endOffset": 299
                 },
                 "from": {
-                    "file": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/res/values-te/values.xml",
+                    "file": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/res/values-te/values.xml",
                     "position": {
                         "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 343,
-                        "endColumn": 226,
-                        "endOffset": 565
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 198,
+                        "endOffset": 483
                     }
                 }
             }

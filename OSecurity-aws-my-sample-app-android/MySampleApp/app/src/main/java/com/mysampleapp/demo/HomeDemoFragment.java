@@ -19,15 +19,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.MediaController;
 import android.widget.VideoView;
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
 
 import java.io.FileOutputStream;
 
@@ -69,6 +72,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+
 public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickListener {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
@@ -78,6 +82,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     private String firebaseID;
     private VideoView vidView;
     private MediaController vidControl;
+    private WebView webView;
 
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
@@ -258,18 +263,47 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         /**
          * Forsøk på video-view, blir krøll
          */
+
         //TODO: Refactor to be in only a part of the view instead of taking over everything
-        vidView = (VideoView) view.findViewById(R.id.myVideo);
+
+        final WebView webView = (WebView) view.findViewById(R.id.webView);
+        int default_zoom_level=100;
+
+        final String vidAddress = "https://youtu.be/P47bqscizJY";
+
+        webView.setInitialScale(default_zoom_level);
+
+        webView.post(new Runnable() {
+            @Override
+            public void run() {
+                int width = webView.getWidth();
+                int height = webView.getHeight();
+                webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+            }
+        });
+
+        /**
+        vidView = (VideoView) view.findViewById(R.id.videoView);
         vidControl = new MediaController(getActivity());
+
         vidControl.setAnchorView(vidView);
         vidControl.setMediaPlayer(vidView);
         //vidControl.setEnabled(false);
-        vidView.setMediaController(vidControl);
-        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        //String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
+        //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
+        //String vidAddress = "https://youtu.be/xrXBZWQxk44";
+        String vidAddress = "https://youtu.be/P47bqscizJY";
         Uri vidUri = Uri.parse(vidAddress);
+        //vidView.setVideoURI(vidUri);
         vidView.setVideoURI(vidUri);
-        vidView.setZOrderOnTop(true);
+        vidView.setMediaController(vidControl);
+        vidView.requestFocus();
+
         vidView.start();
+         */
+
+
         return view;
     }
 

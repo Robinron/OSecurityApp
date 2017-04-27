@@ -5,46 +5,33 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="12328325286629"
+    timestamp="13798119825474"
     token="5830540801881922955"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="985" />
+        duration="1362" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="65" />
+        duration="1307" />
     <task
         name="verifier"
-        duration="4" />
+        duration="287" />
 
     <artifact
-        location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
+        location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="11612988346807"
+        timestamp="13798119825474"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="12328325286629"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

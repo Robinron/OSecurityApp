@@ -10,9 +10,6 @@ public final class R {
 	public static final class array {
 	}
 	public static final class attr {
-		public static final int circleCrop = 0x7f0100b0;
-		public static final int imageAspectRatio = 0x7f0100af;
-		public static final int imageAspectRatioAdjust = 0x7f0100ae;
 	}
 	public static final class color {
 	}
@@ -21,32 +18,26 @@ public final class R {
 	public static final class drawable {
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f0c002c;
-		public static final int adjust_width = 0x7f0c002d;
-		public static final int none = 0x7f0c001d;
-		public static final int normal = 0x7f0c0019;
-		public static final int radio = 0x7f0c0051;
-		public static final int text = 0x7f0c00dd;
-		public static final int text2 = 0x7f0c00db;
-		public static final int toolbar = 0x7f0c0072;
-		public static final int wrap_content = 0x7f0c0028;
+		public static final int auto = 0x7f0f0034;
+		public static final int center = 0x7f0f0036;
+		public static final int none = 0x7f0f0023;
+		public static final int normal = 0x7f0f001f;
+		public static final int radio = 0x7f0f006c;
+		public static final int text = 0x7f0f010c;
+		public static final int text2 = 0x7f0f010a;
+		public static final int toolbar = 0x7f0f008d;
+		public static final int wrap_content = 0x7f0f0033;
 	}
 	public static final class integer {
-		public static final int google_play_services_version = 0x7f0d0003;
+		public static final int google_play_services_version = 0x7f0d0006;
 	}
 	public static final class layout {
 	}
-	public static final class raw {
-	}
 	public static final class string {
-		public static final int common_google_play_services_unknown_issue = 0x7f070013;
+		public static final int common_google_play_services_unknown_issue = 0x7f090013;
 	}
 	public static final class style {
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = { 0x7f0100ae, 0x7f0100af, 0x7f0100b0 };
-		public static final int LoadingImageView_circleCrop = 2;
-		public static final int LoadingImageView_imageAspectRatio = 1;
-		public static final int LoadingImageView_imageAspectRatioAdjust = 0;
 	}
 }

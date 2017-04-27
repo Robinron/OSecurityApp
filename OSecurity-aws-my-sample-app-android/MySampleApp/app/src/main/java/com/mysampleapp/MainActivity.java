@@ -26,8 +26,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.net.Uri;
-import android.widget.MediaController;
-import android.widget.VideoView;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+import java.util.HashMap;
+
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -261,6 +268,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //awsCredentials = new BasicAWSCredentials("ACCESS_KEY_CHANGE_ME", "SECRET_KEY_CHANGE_ME");
         //btnConnect.setEnabled(true);
 
+        /**
+        Intent i = new Intent(MainActivity.this, StreamingActivity.class);
+        startActivity(i);
+         */
+        Intent i = new Intent(MainActivity.this, HomeDemoFragment.class);
+        startActivity(i);
 
     }
 
