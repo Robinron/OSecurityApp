@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -42,8 +43,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -148,6 +152,10 @@ public class PubSubActivity extends AppCompatActivity {
 
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
+
+    private VideoView vidView;
+
+    private MediaController vidControl;
 
 
 
@@ -265,6 +273,9 @@ public class PubSubActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
+
+
         // Obtain a reference to the mobile client. It is created in the Application class,
         // but in case a custom Application class is not used, we initialize it here if necessary.
         AWSMobileClient.initializeMobileClientIfNecessary(this);
@@ -373,6 +384,7 @@ public class PubSubActivity extends AppCompatActivity {
         credentialsProvider.setLogins(logins);
 
         Region region = Region.getRegion(MY_REGION);
+
 
 
 

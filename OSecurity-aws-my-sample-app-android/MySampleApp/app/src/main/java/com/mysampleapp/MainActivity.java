@@ -25,6 +25,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+import java.util.HashMap;
+
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -86,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button   signOutButton;
 
     private Button mqttButton;
+
 
     // Customer specific IoT endpoint
     // AWS Iot CLI describe-endpoint call returns: XXXXXXXXXX.iot.<region>.amazonaws.com,
@@ -173,6 +184,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
+
+
         setupToolbar(savedInstanceState);
 
         setupNavigationMenu(savedInstanceState);
@@ -189,8 +202,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Context context = getApplicationContext();
                 //CharSequence text = "Hei toast, knapp funker";
                 //int duration = Toast.LENGTH_SHORT;
+
+                //TODO: Få inn de neste to linjene, de fungerer
+                //TODO: Bestemme oss for om det er denne eller den neste onClick vi skal beholde
                 Intent i = new Intent(MainActivity.this, PubSubActivity.class);
                 startActivity(i);
+                Log.d(LOG_TAG, "Entered onClick");
                 //connect();
                 //Toast toast = Toast.makeText(context, text, duration);
                 //toast.show();
@@ -251,6 +268,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //awsCredentials = new BasicAWSCredentials("ACCESS_KEY_CHANGE_ME", "SECRET_KEY_CHANGE_ME");
         //btnConnect.setEnabled(true);
 
+        /**
+        Intent i = new Intent(MainActivity.this, StreamingActivity.class);
+        startActivity(i);
+         */
+        Intent i = new Intent(MainActivity.this, HomeDemoFragment.class);
+        startActivity(i);
 
     }
 
@@ -293,9 +316,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //CharSequence text = "Hei toast, knapp funker";
                 //int duration = Toast.LENGTH_SHORT;
                 //connect();
+
+                //TODO Ta tilbake de to neste linjene, disse funker
+                //Intent i = new Intent(MainActivity.this, PubSubActivity.class);
+                //startActivity(i);
                 Intent i = new Intent(MainActivity.this, PubSubActivity.class);
                 startActivity(i);
-
+                Log.d(LOG_TAG, "Entered second click listener");
                 //Toast toast = Toast.makeText(context, text, duration);
                 //toast.show();
             }

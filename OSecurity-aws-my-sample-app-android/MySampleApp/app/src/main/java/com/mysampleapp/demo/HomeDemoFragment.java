@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
@@ -17,6 +19,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -24,6 +29,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.MediaController;
+import android.widget.VideoView;
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+
 import java.io.FileOutputStream;
 
 
@@ -64,13 +74,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+
 public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickListener {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
-    private Button mqttButton;
+    private Button mqttButton, streamingButton;
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
+    private VideoView vidView;
+    private MediaController vidControl;
+    private WebView webView;
+
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -106,7 +121,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-/**
+
+
+    /**
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getActivity());
         new AsyncTask<Void, Void, Void>() {
@@ -163,6 +180,11 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         mqttButton = (Button) view.findViewById(R.id.mqttButton);
         mqttButton.setOnClickListener(this);
+
+        streamingButton = (Button) view.findViewById(R.id.streamingButton);
+        streamingButton.setOnClickListener(this);
+
+
 
         snapshotView = (ImageView) view.findViewById(R.id.snapshotView);
         snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
@@ -243,8 +265,94 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
         connectClick();
+
+
+        /**
+         * Forsøk på web-view, funker men åpner chrome for å vise youtube video
+         * */
+
+
+        //TODO: Refactor to be in only a part of the view instead of taking over everything
+
+        final WebView webView = (WebView) view.findViewById(R.id.webView);
+
+        webView.post(new Runnable() {
+            @Override
+            public void run() {
+                //final String vidAddress = "https://youtu.be/P47bqscizJY";
+                final String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
+
+                 //int width = webView.getWidth();
+                 //int height = webView.getHeight();
+                 //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+                webView.loadUrl(vidAddress);
+                webView.setWebChromeClient(new WebChromeClient());
+            }
+        });
+
+
+
+        /**
+         * Kode for å vise youtube video, viser bare at den ikke kan vise
+         *
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+
+        //String vidAddress = "https://www.youtube.com/watch?v=nnQDiGBFIXk";
+        String rsp = "rtsp://r5---sn-5hne6n7e.googlevideo.com/Cj0LENy73wIaNAmk3cJBg-iaXhMYDSANFC149wFZMOCoAUIASARgoLaa5PT-7-1YigELeEpMU181VmVVR0UM/1A671C27615E13183B320B362AE41A1133BD5C42.D29F992A65901F27777307674F66F552D515799C/yt6/1/video.3gp";
+        Uri vidUri = Uri.parse(rsp);
+
+        vidView.setVideoURI(vidUri);
+
+        vidView.setMediaController(vidControl);
+
+        vidView.start();
+         */
+
+        /**
+         * Working solution but opens in chrome with 31s lag
+         *
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ustream.tv/channel/yyK6Mm9gxRS"));
+        startActivity(intent);
+         */
+
+
+        /**
+         *
+
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
+
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+        //vidControl.setEnabled(false);
+        //String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
+        //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
+        //String vidAddress = "https://youtu.be/xrXBZWQxk44";
+        String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
+        //String vidAddress = "https://youtu.be/P47bqscizJY";
+        Uri vidUri = Uri.parse(vidAddress);
+        //vidView.setVideoURI(vidUri);
+        vidView.setVideoURI(vidUri);
+        vidView.setMediaController(vidControl);
+        vidView.requestFocus();
+
+        vidView.start();
+         */
+
+
         return view;
     }
+
+    public void startStream(){
+
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -253,6 +361,10 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 Log.d(LOG_TAG, "BUTTON IS CLICKED!");
                 //handleS3();
                 publish();
+                break;
+            case R.id.streamingButton:
+                Log.d(LOG_TAG, "Stream button is clicked!");
+                startStream();
                 break;
             default:
                 break;
@@ -267,6 +379,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         final DemoListAdapter adapter = new DemoListAdapter(getActivity());
         adapter.addAll(DemoConfiguration.getDemoFeatureList());
+
+
 
         //ListView listView = (ListView) view.findViewById(android.R.id.list);
         //listView.setAdapter(adapter);
@@ -338,6 +452,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         public ImageView iconImageView;
         public TextView titleTextView;
         public TextView subtitleTextView;
+        public VideoView vidView;
     }
     public void s3Snapshot() {
 

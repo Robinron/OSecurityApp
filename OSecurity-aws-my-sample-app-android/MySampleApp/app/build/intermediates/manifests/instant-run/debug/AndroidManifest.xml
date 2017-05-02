@@ -27,12 +27,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
-    <service android:name="org.eclipse.paho.android.service.MqttService" >
-    </service>
-
-    <meta-data
-        android:name="android.support.VERSION"
-        android:value="25.3.0" />
+    <service android:name="org.eclipse.paho.android.service.MqttService" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -41,6 +36,10 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.amazon.mysampleapp.permission.C2D_MESSAGE" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
 
     <application
         name="com.mysampleapp.Application"
@@ -68,33 +67,27 @@
         <activity
             android:name="com.mysampleapp.SignInActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_sign_in" >
-        </activity>
+            android:label="@string/title_activity_sign_in" />
         <activity
             android:name="com.mysampleapp.demo.userpools.ForgotPasswordActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_forgot_password" >
-        </activity>
+            android:label="@string/title_activity_forgot_password" />
         <activity
             android:name="com.mysampleapp.demo.userpools.SignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_sign_up" >
-        </activity>
+            android:label="@string/title_activity_sign_up" />
         <activity
             android:name="com.mysampleapp.demo.userpools.MFAActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_mfa" >
-        </activity>
+            android:label="@string/title_activity_mfa" />
         <activity
             android:name="com.mysampleapp.demo.userpools.SignUpConfirmActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/title_activity_sign_up_confirm" >
-        </activity>
+            android:label="@string/title_activity_sign_up_confirm" />
         <activity
             android:name="com.mysampleapp.PubSubActivity"
             android:label="@string/title_activity_main"
-            android:launchMode="singleInstance" >
-        </activity>
+            android:launchMode="singleInstance" />
 
         <!-- BEGIN - APP CONTENT DELIVERY AND USER DATA STORAGE -->
 
@@ -125,8 +118,7 @@
             android:name="com.amazonaws.mobile.downloader.query.DownloadQueueProvider"
             android:authorities="@string/download_queue_provider_authority"
             android:enabled="true"
-            android:exported="false" >
-        </provider>
+            android:exported="false" />
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="@string/content_file_provider_authority"
@@ -150,9 +142,23 @@
 
         <!-- END - APP CONTENT DELIVERY AND USER DATA STORAGE -->
 
-
+        <activity
+            android:name="com.mysampleapp.StreamingActivity"
+            android:label="@string/title_activity_streaming"
+            android:parentActivityName="com.mysampleapp.MainActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mysampleapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <!--
-         FirebaseMessagingService performs security checks at runtime,
+ FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
         -->
         <service
@@ -188,7 +194,6 @@
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="com.amazon.mysampleapp" />
             </intent-filter>
