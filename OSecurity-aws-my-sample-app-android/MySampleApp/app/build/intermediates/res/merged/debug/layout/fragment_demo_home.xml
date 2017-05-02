@@ -17,10 +17,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/streamingButton"
             android:layout_centerHorizontal="true"/>
-        <VideoView
+        <WebView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/vidView"
+            android:id="@+id/webView"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/snapshotView"/>
 

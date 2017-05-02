@@ -1006,9 +1006,9 @@ int id user_files_context_menu_delete 0x7f0f001a
 int id user_files_context_menu_new_folder 0x7f0f001b
 int id user_files_context_menu_upload 0x7f0f001c
 int id user_info 0x7f0f0090
-int id vidView 0x7f0f00d0
 int id view_offset_helper 0x7f0f001d
 int id visible 0x7f0f010f
+int id webView 0x7f0f00d0
 int id withText 0x7f0f004d
 int id wrap_content 0x7f0f0033
 int integer abc_config_activityDefaultDur 0x7f0d0001

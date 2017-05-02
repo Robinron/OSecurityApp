@@ -2990,9 +2990,9 @@ containing a value of this type.
         public static final int user_files_context_menu_new_folder=0x7f0f001b;
         public static final int user_files_context_menu_upload=0x7f0f001c;
         public static final int user_info=0x7f0f0090;
-        public static final int vidView=0x7f0f00d0;
         public static final int view_offset_helper=0x7f0f001d;
         public static final int visible=0x7f0f010f;
+        public static final int webView=0x7f0f00d0;
         public static final int withText=0x7f0f004d;
         public static final int wrap_content=0x7f0f0033;
     }

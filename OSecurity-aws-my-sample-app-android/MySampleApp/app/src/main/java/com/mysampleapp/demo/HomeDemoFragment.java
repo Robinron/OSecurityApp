@@ -269,6 +269,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         /**
          * Forsøk på web-view, funker men åpner chrome for å vise youtube video
+         * */
 
 
         //TODO: Refactor to be in only a part of the view instead of taking over everything
@@ -279,7 +280,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
             @Override
             public void run() {
                 //final String vidAddress = "https://youtu.be/P47bqscizJY";
-                final String vidAddress = "https://www.youtube.com/embed/la3tjJRo0W0";
+                final String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
 
                  //int width = webView.getWidth();
                  //int height = webView.getHeight();
@@ -290,7 +291,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 webView.setWebChromeClient(new WebChromeClient());
             }
         });
-         */
+
 
 
         /**
@@ -314,13 +315,16 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         /**
          * Working solution but opens in chrome with 31s lag
-         * */
+         *
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ustream.tv/channel/yyK6Mm9gxRS"));
         startActivity(intent);
+         */
 
 
         /**
-        vidView = (VideoView) view.findViewById(R.id.videoView);
+         *
+
+        vidView = (VideoView) view.findViewById(R.id.vidView);
         vidControl = new MediaController(getActivity());
 
         vidControl.setAnchorView(vidView);
@@ -330,7 +334,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
         //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
         //String vidAddress = "https://youtu.be/xrXBZWQxk44";
-        String vidAddress = "https://youtu.be/P47bqscizJY";
+        String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
+        //String vidAddress = "https://youtu.be/P47bqscizJY";
         Uri vidUri = Uri.parse(vidAddress);
         //vidView.setVideoURI(vidUri);
         vidView.setVideoURI(vidUri);
