@@ -15,7 +15,7 @@
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
 
-    tools:context="com.mysampleapp.demo.userpools.MFAActivity">
+    tools:context="com.mysampleapp.etc.userpools.MFAActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

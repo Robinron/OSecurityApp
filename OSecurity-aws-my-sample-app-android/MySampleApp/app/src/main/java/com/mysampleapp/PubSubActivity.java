@@ -20,11 +20,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -45,7 +42,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 
@@ -59,28 +55,20 @@ import com.amazonaws.mobileconnectors.cognito.Record;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoRefreshToken;
-import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
-import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 
 import com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType;
 import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.S3Object;
-import com.mysampleapp.demo.DemoConfiguration;
-import com.mysampleapp.demo.HomeDemoFragment;
-import com.mysampleapp.demo.UserSettings;
+import com.mysampleapp.etc.Configuration;
+import com.mysampleapp.etc.HomeFragment;
+import com.mysampleapp.etc.UserSettings;
 import com.mysampleapp.navigation.NavigationDrawer;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.google.firebase.iid.FirebaseInstanceId;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 
 
@@ -206,12 +194,12 @@ public class PubSubActivity extends AppCompatActivity {
 
         // Add navigation drawer menu items.
         // Home isn't a demo, but is fake as a demo.
-        DemoConfiguration.DemoFeature home = new DemoConfiguration.DemoFeature();
+        Configuration.DemoFeature home = new Configuration.DemoFeature();
         home.iconResId = R.mipmap.icon_home;
         home.titleResId = R.string.main_nav_menu_item_home;
         navigationDrawer.addDemoFeatureToMenu(home);
 
-        for (DemoConfiguration.DemoFeature demoFeature : DemoConfiguration.getDemoFeatureList()) {
+        for (Configuration.DemoFeature demoFeature : Configuration.getDemoFeatureList()) {
             navigationDrawer.addDemoFeatureToMenu(demoFeature);
         }
 
@@ -292,7 +280,7 @@ public class PubSubActivity extends AppCompatActivity {
 
         //LayoutInflater inflater = this.getLayoutInflater();
         //ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
-        //View homeView = inflater.inflate(R.layout.fragment_demo_home , viewGroup);
+        //View homeView = inflater.inflate(R.layout.fragment_home , viewGroup);
 
 
         //snapshotView = (ImageView) homeView.findViewById(R.id.snapshotView);
@@ -417,7 +405,7 @@ public class PubSubActivity extends AppCompatActivity {
 
     }
 
-    private static final class DemoListAdapter extends ArrayAdapter<DemoConfiguration.DemoFeature> {
+    private static final class DemoListAdapter extends ArrayAdapter<Configuration.DemoFeature> {
         private LayoutInflater inflater;
 
         public DemoListAdapter(final Context context) {
@@ -428,20 +416,20 @@ public class PubSubActivity extends AppCompatActivity {
         @Override
         public View getView(final int position, final View convertView, final ViewGroup parent) {
             View view;
-            HomeDemoFragment.ViewHolder holder;
+            HomeFragment.ViewHolder holder;
             if (convertView == null) {
                 view = inflater.inflate(R.layout.list_item_icon_text_with_subtitle, parent, false);
-                holder = new HomeDemoFragment.ViewHolder();
+                holder = new HomeFragment.ViewHolder();
                 holder.iconImageView = (ImageView) view.findViewById(R.id.list_item_icon);
                 holder.titleTextView = (TextView) view.findViewById(R.id.list_item_title);
                 holder.subtitleTextView = (TextView) view.findViewById(R.id.list_item_subtitle);
                 view.setTag(holder);
             } else {
                 view = convertView;
-                holder = (HomeDemoFragment.ViewHolder) convertView.getTag();
+                holder = (HomeFragment.ViewHolder) convertView.getTag();
             }
 
-            DemoConfiguration.DemoFeature item = getItem(position);
+            Configuration.DemoFeature item = getItem(position);
             holder.iconImageView.setImageResource(item.iconResId);
             holder.titleTextView.setText(item.titleResId);
             holder.subtitleTextView.setText(item.subtitleResId);
@@ -545,8 +533,8 @@ public class PubSubActivity extends AppCompatActivity {
         }
 
         if (fragmentManager.getBackStackEntryCount() == 0) {
-            if (fragmentManager.findFragmentByTag(HomeDemoFragment.class.getSimpleName()) == null) {
-                final Class fragmentClass = HomeDemoFragment.class;
+            if (fragmentManager.findFragmentByTag(HomeFragment.class.getSimpleName()) == null) {
+                final Class fragmentClass = HomeFragment.class;
                 // if we aren't on the home fragment, navigate home.
                 final Fragment fragment = Fragment.instantiate(this, fragmentClass.getName());
 

@@ -25,16 +25,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-
-import java.util.HashMap;
-
-import io.vov.vitamio.LibsChecker;
-import io.vov.vitamio.MediaPlayer;
-import io.vov.vitamio.widget.MediaController;
-import io.vov.vitamio.widget.VideoView;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -45,23 +35,21 @@ import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.cognito.Record;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttClientStatusCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttManager;
-import com.amazonaws.mobileconnectors.iot.AWSIotMqttNewMessageCallback;
 import com.amazonaws.mobileconnectors.iot.AWSIotMqttQos;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
-import com.mysampleapp.demo.DemoConfiguration;
-import com.mysampleapp.demo.HomeDemoFragment;
+import com.mysampleapp.etc.Configuration;
+import com.mysampleapp.etc.HomeFragment;
 import android.content.IntentFilter;
 import android.content.BroadcastReceiver;
 import android.support.v4.content.LocalBroadcastManager;
-import java.io.UnsupportedEncodingException;
+
 import java.util.UUID;
-import android.widget.Toast;
 
 
 //import com.mysampleapp.mqtt.MqttPub;
 import com.mysampleapp.navigation.NavigationDrawer;
-import com.mysampleapp.demo.UserSettings;
+import com.mysampleapp.etc.UserSettings;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -153,12 +141,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Add navigation drawer menu items.
         // Home isn't a demo, but is fake as a demo.
-        DemoConfiguration.DemoFeature home = new DemoConfiguration.DemoFeature();
+        Configuration.DemoFeature home = new Configuration.DemoFeature();
         home.iconResId = R.mipmap.icon_home;
         home.titleResId = R.string.main_nav_menu_item_home;
         navigationDrawer.addDemoFeatureToMenu(home);
 
-        for (DemoConfiguration.DemoFeature demoFeature : DemoConfiguration.getDemoFeatureList()) {
+        for (Configuration.DemoFeature demoFeature : Configuration.getDemoFeatureList()) {
             navigationDrawer.addDemoFeatureToMenu(demoFeature);
         }
 
@@ -272,7 +260,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i = new Intent(MainActivity.this, StreamingActivity.class);
         startActivity(i);
          */
-        Intent i = new Intent(MainActivity.this, HomeDemoFragment.class);
+        Intent i = new Intent(MainActivity.this, HomeFragment.class);
         startActivity(i);
 
     }
@@ -441,8 +429,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (fragmentManager.getBackStackEntryCount() == 0) {
-            if (fragmentManager.findFragmentByTag(HomeDemoFragment.class.getSimpleName()) == null) {
-                final Class fragmentClass = HomeDemoFragment.class;
+            if (fragmentManager.findFragmentByTag(HomeFragment.class.getSimpleName()) == null) {
+                final Class fragmentClass = HomeFragment.class;
                 // if we aren't on the home fragment, navigate home.
                 final Fragment fragment = Fragment.instantiate(this, fragmentClass.getName());
 

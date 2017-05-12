@@ -7,7 +7,7 @@
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
 
-    tools:context="com.mysampleapp.demo.userpools.SignUpActivity">
+    tools:context="com.mysampleapp.etc.userpools.SignUpActivity">
 
     <TextView
         android:id="@+id/signup_message"

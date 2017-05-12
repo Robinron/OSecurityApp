@@ -49,19 +49,19 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_in"></activity>
         <activity
-            android:name=".demo.userpools.ForgotPasswordActivity"
+            android:name=".etc.userpools.ForgotPasswordActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_forgot_password"></activity>
         <activity
-            android:name=".demo.userpools.SignUpActivity"
+            android:name=".etc.userpools.SignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_up"></activity>
         <activity
-            android:name=".demo.userpools.MFAActivity"
+            android:name=".etc.userpools.MFAActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_mfa"></activity>
         <activity
-            android:name=".demo.userpools.SignUpConfirmActivity"
+            android:name=".etc.userpools.SignUpConfirmActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_up_confirm"></activity>
         <activity

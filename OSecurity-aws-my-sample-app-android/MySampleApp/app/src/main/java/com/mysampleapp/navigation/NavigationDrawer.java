@@ -24,9 +24,9 @@ import com.amazonaws.mobile.AWSMobileClient;
 import com.amazonaws.mobile.user.IdentityManager;
 import com.amazonaws.mobile.user.IdentityProvider;
 import com.mysampleapp.R;
-import com.mysampleapp.demo.DemoConfiguration;
-import com.mysampleapp.demo.DemoInstructionFragment;
-import com.mysampleapp.demo.HomeDemoFragment;
+import com.mysampleapp.etc.Configuration;
+import com.mysampleapp.etc.InstructionFragment;
+import com.mysampleapp.etc.HomeFragment;
 
 import static com.mysampleapp.R.string.app_name;
 
@@ -41,7 +41,7 @@ public class NavigationDrawer {
 
     /** The view group that will contain the navigation drawer menu items. */
     private ListView drawerItems;
-    private ArrayAdapter<DemoConfiguration.DemoFeature> adapter;
+    private ArrayAdapter<Configuration.DemoFeature> adapter;
 
     /** The id of the fragment container. */
     private int fragmentContainerId;
@@ -61,7 +61,7 @@ public class NavigationDrawer {
         // Keep a reference to the activity containing this navigation drawer.
         this.containingActivity = activity;
         this.drawerItems = drawerItemsContainer;
-        adapter = new ArrayAdapter<DemoConfiguration.DemoFeature>(activity, R.layout.nav_drawer_item) {
+        adapter = new ArrayAdapter<Configuration.DemoFeature>(activity, R.layout.nav_drawer_item) {
             @Override
             public View getView(final int position, final View convertView,
                                 final ViewGroup parent) {
@@ -69,7 +69,7 @@ public class NavigationDrawer {
                 if (view == null) {
                     view = activity.getLayoutInflater().inflate(R.layout.nav_drawer_item, parent, false);
                 }
-                final DemoConfiguration.DemoFeature item = getItem(position);
+                final Configuration.DemoFeature item = getItem(position);
                 ((ImageView) view.findViewById(R.id.drawer_item_icon)).setImageResource(item.iconResId);
                 ((TextView) view.findViewById(R.id.drawer_item_text)).setText(item.titleResId);
                 return view;
@@ -91,8 +91,8 @@ public class NavigationDrawer {
                     return;
                 }
 
-                DemoConfiguration.DemoFeature item = adapter.getItem(position);
-                final Fragment fragment = DemoInstructionFragment.newInstance(item.name);
+                Configuration.DemoFeature item = adapter.getItem(position);
+                final Fragment fragment = InstructionFragment.newInstance(item.name);
 
                 activity.getSupportFragmentManager()
                     .beginTransaction()
@@ -191,11 +191,11 @@ public class NavigationDrawer {
     }
 
     public void showHome() {
-        final Fragment fragment = new HomeDemoFragment();
+        final Fragment fragment = new HomeFragment();
 
         containingActivity.getSupportFragmentManager()
                 .beginTransaction()
-                .replace(fragmentContainerId, fragment, HomeDemoFragment.class.getSimpleName())
+                .replace(fragmentContainerId, fragment, HomeFragment.class.getSimpleName())
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
 
@@ -205,7 +205,7 @@ public class NavigationDrawer {
         closeDrawer();
     }
 
-    public void addDemoFeatureToMenu(DemoConfiguration.DemoFeature demoFeature) {
+    public void addDemoFeatureToMenu(Configuration.DemoFeature demoFeature) {
         adapter.add(demoFeature);
         adapter.notifyDataSetChanged();
     }

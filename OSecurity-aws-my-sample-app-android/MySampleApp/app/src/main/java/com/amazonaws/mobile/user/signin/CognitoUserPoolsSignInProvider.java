@@ -32,13 +32,11 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.Authentic
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.GenericHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
 import com.mysampleapp.R;
-import com.mysampleapp.SignInActivity;
-import com.mysampleapp.demo.userpools.ForgotPasswordActivity;
-import com.mysampleapp.demo.userpools.MFAActivity;
-import com.mysampleapp.demo.userpools.SignUpActivity;
-import com.mysampleapp.demo.userpools.SignUpConfirmActivity;
+import com.mysampleapp.etc.userpools.ForgotPasswordActivity;
+import com.mysampleapp.etc.userpools.MFAActivity;
+import com.mysampleapp.etc.userpools.SignUpActivity;
+import com.mysampleapp.etc.userpools.SignUpConfirmActivity;
 import com.mysampleapp.util.ViewHelper;
 
 import java.util.HashSet;
