@@ -62,6 +62,8 @@ public class UserFilesDemoFragment extends DemoFragmentBase {
     public void onViewCreated(final View view, final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Action for public folder button
+        //TODO Denne koden nedenfor kan kanskje brukes for arkivfunksjonalitet, ikke brukt atm
+        /**
         view.findViewById(R.id.button_userFiles_public)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -122,7 +124,7 @@ public class UserFilesDemoFragment extends DemoFragmentBase {
                                     S3_PREFIX_PROTECTED, AWSConfiguration.AMAZON_S3_USER_FILES_BUCKET_REGION);
                         }
                     }
-                });
+                }); */
 
     }
 

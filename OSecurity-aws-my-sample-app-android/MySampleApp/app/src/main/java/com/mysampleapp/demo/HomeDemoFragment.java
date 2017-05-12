@@ -27,6 +27,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.MediaController;
@@ -69,6 +70,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -82,9 +86,13 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
+    private Spinner streamingSpinner;
     private VideoView vidView;
     private MediaController vidControl;
     private WebView webView;
+    private TextView snapshotTimestamp;
+    private String snapshotTime = "";
+    boolean streamOnline = false;
 
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
@@ -184,12 +192,14 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         streamingButton = (Button) view.findViewById(R.id.streamingButton);
         streamingButton.setOnClickListener(this);
 
-
-
+        streamingSpinner = (Spinner) view.findViewById(R.id.streamSpinner);
+        streamingSpinner.setVisibility(View.GONE);
+        snapshotTimestamp = (TextView) view.findViewById(R.id.snapshotTimestamp);
         snapshotView = (ImageView) view.findViewById(R.id.snapshotView);
         snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
         clientId = UUID.randomUUID().toString();
 
+        webView = (WebView) view.findViewById(R.id.webView);
 
 
         //syncUserSettings();
@@ -257,14 +267,14 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 MY_REGION
         );
          */
-
-
+        Boolean loseMyShit = true;
+        String bachlor = "";
        // logins.put("eu-west-1_2F3hyifQN", idToken);
 
        // credentialsProvider.setLogins(logins);
-
-
         connectClick();
+
+
 
 
         /**
@@ -274,23 +284,27 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         //TODO: Refactor to be in only a part of the view instead of taking over everything
 
-        final WebView webView = (WebView) view.findViewById(R.id.webView);
 
+        /**
         webView.post(new Runnable() {
             @Override
             public void run() {
                 //final String vidAddress = "https://youtu.be/P47bqscizJY";
-                final String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
+                final String vidAddress = "https://www.google.no/";
 
                  //int width = webView.getWidth();
                  //int height = webView.getHeight();
                  //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
                 webView.getSettings().setJavaScriptEnabled(true);
                 webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+                snapshotView.setVisibility(View.GONE);
+                streamingSpinner.setVisibility(View.VISIBLE);
                 webView.loadUrl(vidAddress);
                 webView.setWebChromeClient(new WebChromeClient());
+                streamingSpinner.setVisibility(View.GONE);
+
             }
-        });
+        }); */
 
 
 
@@ -348,23 +362,59 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         return view;
     }
-
-    public void startStream(){
-
+    public boolean isStreamOnline() {
+        return streamOnline;
     }
 
+    public void setStreamOnline(boolean streamOnline) {
+        this.streamOnline = streamOnline;
+    }
+
+    public void startStream(){
+        final String vidAddress = "https://www.google.no/";
+
+        //int width = webView.getWidth();
+        //int height = webView.getHeight();
+        //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+        snapshotView.setVisibility(View.GONE);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webView.loadUrl(vidAddress);
+        webView.setWebChromeClient(new WebChromeClient());
+        streamingSpinner.setVisibility(View.GONE);
+        setStreamOnline(true);
+        streamingButton.setText("Stopp stream");
+
+    }
+    public void stopStream() {
+        webView.loadUrl("about:blank");
+        snapshotView.setVisibility(View.VISIBLE);
+        streamingSpinner.setVisibility(View.GONE);
+        setStreamOnline(false);
+        streamingButton.setText("Start stream");
+    }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.mqttButton:
-                Log.d(LOG_TAG, "BUTTON IS CLICKED!");
+                Log.d(LOG_TAG, "mqtt clicked!");
                 //handleS3();
                 publish();
                 break;
             case R.id.streamingButton:
-                Log.d(LOG_TAG, "Stream button is clicked!");
-                startStream();
+                if (isStreamOnline() == false) {
+                    streamingSpinner.setVisibility(View.VISIBLE);
+                    Log.d(LOG_TAG, "Start stream clicked!");
+                    startStream();
+                }
+                else if (isStreamOnline() == true) {
+                    streamingSpinner.setVisibility(View.VISIBLE);
+                    Log.d(LOG_TAG, "Stop stream clicked!");
+                    stopStream();
+
+                }
+
                 break;
             default:
                 break;
@@ -706,6 +756,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         InputStream stream = this.getLocalImage( imageName );
         view.setImageDrawable( Drawable.createFromStream( stream, "src" ) );
+        GregorianCalendar calendar = new GregorianCalendar();
+
+        snapshotTimestamp.setText("Siste stillbilde hentet " + new SimpleDateFormat("HH:mm dd.MM.yyyy").format(calendar.getTime()));
     }
 
     private boolean isNewImageAvailable( AmazonS3Client s3,
