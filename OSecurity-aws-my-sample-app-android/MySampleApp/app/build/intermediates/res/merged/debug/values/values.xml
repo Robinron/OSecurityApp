@@ -710,6 +710,7 @@
     <string name="google_app_id" translatable="false">1:249253556344:android:0ed891489004be59</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB_XnroeMLqY0FICtRpkpK7390jRflq6tc</string>
     <string name="google_storage_bucket" translatable="false">osecuritypush.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="identity_demo_dialog_dismiss_text">DISMISS</string>
     <string name="identity_demo_error_dialog_title">Failed Identity Retrieval</string>
     <string name="identity_demo_error_message_failed_get_identity">Could not retrieve the user identity:\u0020</string>
@@ -725,6 +726,7 @@
     <string name="main_fragment_title_user_identity">User Identity</string>
     <string name="main_fragment_title_user_settings">User Profile Data</string>
     <string name="main_nav_menu_default_user_text">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="main_nav_menu_item_archive">Arkiv</string>
     <string name="main_nav_menu_item_home">Hjem</string>
     <string name="mediacontroller_play_pause">Play/Pause</string>
     <string name="mfa_code_sent_message">Kode sendt.</string>
