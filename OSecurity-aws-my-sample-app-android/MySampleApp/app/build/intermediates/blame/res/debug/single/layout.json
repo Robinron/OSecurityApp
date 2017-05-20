@@ -24,6 +24,10 @@
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/layout/activity_forgot_password.xml"
     },
     {
+        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/layout/fragment_archive.xml",
+        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/layout/fragment_archive.xml"
+    },
+    {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/layout/activity_sign_in.xml",
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/layout/activity_sign_in.xml"
     },
