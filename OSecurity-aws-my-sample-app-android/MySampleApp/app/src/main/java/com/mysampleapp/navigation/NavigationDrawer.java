@@ -24,6 +24,7 @@ import com.amazonaws.mobile.AWSMobileClient;
 import com.amazonaws.mobile.user.IdentityManager;
 import com.amazonaws.mobile.user.IdentityProvider;
 import com.mysampleapp.R;
+import com.mysampleapp.demo.ArchiveFragment;
 import com.mysampleapp.demo.DemoConfiguration;
 import com.mysampleapp.demo.DemoInstructionFragment;
 import com.mysampleapp.demo.HomeDemoFragment;
@@ -89,6 +90,10 @@ public class NavigationDrawer {
                     // home
                     showHome();
                     return;
+                } else if (position == 1) {
+                    //Arkiv
+                } else if (position == 2) {
+                    //Innstillinger
                 }
 
                 DemoConfiguration.DemoFeature item = adapter.getItem(position);
@@ -202,6 +207,21 @@ public class NavigationDrawer {
         // Set the title for the fragment.
         final ActionBar actionBar = containingActivity.getSupportActionBar();
         actionBar.setTitle(R.string.app_name);
+        closeDrawer();
+    }
+
+    public void showArchive() {
+        final Fragment fragment = new ArchiveFragment();
+
+        containingActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .replace(fragmentContainerId, fragment, ArchiveFragment.class.getSimpleName())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
+
+        // Set the title for the fragment.
+        final ActionBar actionBar = containingActivity.getSupportActionBar();
+        actionBar.setTitle(R.string.main_nav_menu_item_archive);
         closeDrawer();
     }
 

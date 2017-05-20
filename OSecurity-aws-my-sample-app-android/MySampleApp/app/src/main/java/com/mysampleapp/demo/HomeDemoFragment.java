@@ -4,9 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
@@ -17,13 +19,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.MediaController;
+import android.widget.VideoView;
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+
 import java.io.FileOutputStream;
 
 
@@ -59,18 +70,30 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+
 public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickListener {
 
     static final String LOG_TAG = PubSubActivity.class.getCanonicalName();
-    private Button mqttButton;
+    private Button mqttButton, streamingButton;
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
+    private Spinner streamingSpinner;
+    private VideoView vidView;
+    private MediaController vidControl;
+    private WebView webView;
+    private TextView snapshotTimestamp;
+    private String snapshotTime = "";
+    boolean streamOnline = false;
+
     //connectClick();
     //            Log.d(LOG_TAG, "BUTTON IS CLICKED!");
 
@@ -106,7 +129,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
 
 
-/**
+
+
+    /**
     public void updateColor() {
         final UserSettings userSettings = UserSettings.getInstance(getActivity());
         new AsyncTask<Void, Void, Void>() {
@@ -164,10 +189,18 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         mqttButton = (Button) view.findViewById(R.id.mqttButton);
         mqttButton.setOnClickListener(this);
 
+        streamingButton = (Button) view.findViewById(R.id.streamingButton);
+        streamingButton.setOnClickListener(this);
+
+        streamingSpinner = (Spinner) view.findViewById(R.id.streamSpinner);
+        streamingSpinner.setVisibility(View.GONE);
+        snapshotTimestamp = (TextView) view.findViewById(R.id.snapshotTimestamp);
         snapshotView = (ImageView) view.findViewById(R.id.snapshotView);
         snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
         clientId = UUID.randomUUID().toString();
 
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
 
 
         //syncUserSettings();
@@ -235,24 +268,167 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 MY_REGION
         );
          */
-
-
+        Boolean loseMyShit = true;
+        String bachlor = "";
        // logins.put("eu-west-1_2F3hyifQN", idToken);
 
        // credentialsProvider.setLogins(logins);
-
-
         connectClick();
+
+
+
+
+        /**
+         * Forsøk på web-view, funker men åpner chrome for å vise youtube video
+         * */
+
+
+        //TODO: Refactor to be in only a part of the view instead of taking over everything
+
+
+        /**
+        webView.post(new Runnable() {
+            @Override
+            public void run() {
+                //final String vidAddress = "https://youtu.be/P47bqscizJY";
+                final String vidAddress = "https://www.google.no/";
+
+                 //int width = webView.getWidth();
+                 //int height = webView.getHeight();
+                 //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+                snapshotView.setVisibility(View.GONE);
+                streamingSpinner.setVisibility(View.VISIBLE);
+                webView.loadUrl(vidAddress);
+                webView.setWebChromeClient(new WebChromeClient());
+                streamingSpinner.setVisibility(View.GONE);
+
+            }
+        }); */
+
+
+
+        /**
+         * Kode for å vise youtube video, viser bare at den ikke kan vise
+         *
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+
+        //String vidAddress = "https://www.youtube.com/watch?v=nnQDiGBFIXk";
+        String rsp = "rtsp://r5---sn-5hne6n7e.googlevideo.com/Cj0LENy73wIaNAmk3cJBg-iaXhMYDSANFC149wFZMOCoAUIASARgoLaa5PT-7-1YigELeEpMU181VmVVR0UM/1A671C27615E13183B320B362AE41A1133BD5C42.D29F992A65901F27777307674F66F552D515799C/yt6/1/video.3gp";
+        Uri vidUri = Uri.parse(rsp);
+
+        vidView.setVideoURI(vidUri);
+
+        vidView.setMediaController(vidControl);
+
+        vidView.start();
+         */
+
+        /**
+         * Working solution but opens in chrome with 31s lag
+         *
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.ustream.tv/channel/yyK6Mm9gxRS"));
+        startActivity(intent);
+         */
+
+
+        /**
+         *
+
+
+         */
+
+
         return view;
+    }
+    public boolean isStreamOnline() {
+        return streamOnline;
+    }
+
+
+
+    public void setStreamOnline(boolean streamOnline) {
+        this.streamOnline = streamOnline;
+    }
+
+    public void startStream(){
+        //final String vidAddress = "http://176.34.150.29:1935/osecstream/myStream/manifest.f4m";
+
+        /**
+        //int width = webView.getWidth();
+        //int height = webView.getHeight();
+        //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
+        snapshotView.setVisibility(View.GONE);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webView.loadUrl(vidAddress);
+        webView.setWebChromeClient(new WebChromeClient());
+        streamingSpinner.setVisibility(View.GONE);
+        setStreamOnline(true);
+        streamingButton.setText("Stopp stream");
+         */
+        snapshotView.setVisibility(View.GONE);
+        streamingButton.setText("Stopp stream");
+
+        streamingSpinner.setVisibility(View.GONE);
+
+
+
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+        //vidControl.setEnabled(false);
+        //String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
+        //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
+        //String vidAddress = "https://youtu.be/xrXBZWQxk44";
+        String vidAddress = "rtsp://176.34.150.29:1935/osecstream/myStream";
+        //String vidAddress = "https://youtu.be/P47bqscizJY";
+        Uri vidUri = Uri.parse(vidAddress);
+        //vidView.setVideoURI(vidUri);
+        vidView.setVideoURI(vidUri);
+        vidView.setMediaController(vidControl);
+        vidView.requestFocus();
+
+        vidView.start();
+        vidView.setVisibility(View.VISIBLE);
+        setStreamOnline(true);
+
+
+
+    }
+    public void stopStream() {
+        vidView.stopPlayback();
+        vidView.setVisibility(View.GONE);
+        streamingSpinner.setVisibility(View.GONE);
+        snapshotView.setVisibility(View.VISIBLE);
+        setStreamOnline(false);
+        streamingButton.setText("Start stream");
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.mqttButton:
-                Log.d(LOG_TAG, "BUTTON IS CLICKED!");
-                //handleS3();
+                Log.d(LOG_TAG, "mqtt clicked!");
                 publish();
+                break;
+            case R.id.streamingButton:
+                if (isStreamOnline() == false) {
+                    streamingSpinner.setVisibility(View.VISIBLE);
+                    Log.d(LOG_TAG, "Start stream clicked!");
+                    startStream();
+                }
+                else if (isStreamOnline() == true) {
+                    streamingSpinner.setVisibility(View.VISIBLE);
+                    Log.d(LOG_TAG, "Stop stream clicked!");
+                    stopStream();
+
+                }
+
                 break;
             default:
                 break;
@@ -267,6 +443,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         final DemoListAdapter adapter = new DemoListAdapter(getActivity());
         adapter.addAll(DemoConfiguration.getDemoFeatureList());
+
+
 
         //ListView listView = (ListView) view.findViewById(android.R.id.list);
         //listView.setAdapter(adapter);
@@ -338,6 +516,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         public ImageView iconImageView;
         public TextView titleTextView;
         public TextView subtitleTextView;
+        public VideoView vidView;
     }
     public void s3Snapshot() {
 
@@ -591,6 +770,9 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
 
         InputStream stream = this.getLocalImage( imageName );
         view.setImageDrawable( Drawable.createFromStream( stream, "src" ) );
+        GregorianCalendar calendar = new GregorianCalendar();
+
+        snapshotTimestamp.setText("Siste stillbilde hentet " + new SimpleDateFormat("HH:mm dd.MM.yyyy").format(calendar.getTime()));
     }
 
     private boolean isNewImageAvailable( AmazonS3Client s3,

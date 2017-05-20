@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -42,8 +43,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -149,6 +153,10 @@ public class PubSubActivity extends AppCompatActivity {
     AWSCredentials awsCredentials;
     CognitoCachingCredentialsProvider credentialsProvider;
 
+    private VideoView vidView;
+
+    private MediaController vidControl;
+
 
 
 
@@ -202,6 +210,11 @@ public class PubSubActivity extends AppCompatActivity {
         home.iconResId = R.mipmap.icon_home;
         home.titleResId = R.string.main_nav_menu_item_home;
         navigationDrawer.addDemoFeatureToMenu(home);
+
+        DemoConfiguration.DemoFeature archive = new DemoConfiguration.DemoFeature();
+        archive.iconResId = R.mipmap.user_files;
+        archive.titleResId = R.string.main_nav_menu_item_archive;
+        navigationDrawer.addDemoFeatureToMenu(archive);
 
         for (DemoConfiguration.DemoFeature demoFeature : DemoConfiguration.getDemoFeatureList()) {
             navigationDrawer.addDemoFeatureToMenu(demoFeature);
@@ -263,6 +276,9 @@ public class PubSubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         // Obtain a reference to the mobile client. It is created in the Application class,
@@ -373,6 +389,7 @@ public class PubSubActivity extends AppCompatActivity {
         credentialsProvider.setLogins(logins);
 
         Region region = Region.getRegion(MY_REGION);
+
 
 
 

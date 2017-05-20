@@ -5,29 +5,29 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="2097271345507"
+    timestamp="104141664176"
     token="5830540801881922955"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1053" />
+        duration="4635" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="545" />
+        duration="2141" />
     <task
         name="verifier"
-        duration="123" />
+        duration="244" />
 
     <artifact
         location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="2097271345507"
+        timestamp="104141664176"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
