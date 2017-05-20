@@ -14,27 +14,7 @@ public class DemoConfiguration {
 
     private static final List<DemoFeature> demoFeatures = new ArrayList<DemoFeature>();
 
-    static {
-        addDemoFeature("user_identity", R.mipmap.user_identity, R.string.feature_sign_in_title,
-                R.string.feature_sign_in_subtitle, R.string.feature_sign_in_overview,
-                R.string.feature_sign_in_description, R.string.feature_sign_in_powered_by,
-                new DemoItem(R.string.main_fragment_title_user_identity, R.mipmap.user_identity,
-                        R.string.feature_sign_in_demo_button, IdentityDemoFragment.class));
-        addDemoFeature("user_data_storage", R.mipmap.user_data_storage,
-                R.string.feature_user_data_storage_title,
-                R.string.feature_user_data_storage_subtitle,
-                R.string.feature_user_data_storage_overview,
-                R.string.feature_user_data_storage_description,
-                R.string.feature_user_data_storage_powered_by
-                , new DemoItem(R.string.main_fragment_title_user_files, R.mipmap.user_files,
-                        R.string.feature_user_data_storage_demo_button_user_file_storage,
-                        UserFilesDemoFragment.class)
-                , new DemoItem(R.string.main_fragment_title_user_settings, R.mipmap.user_profile_data,
-                        R.string.feature_user_data_storage_demo_button_user_settings,
-                        UserSettingsDemoFragment.class)
-        );
 
-    }
 
     public static List<DemoFeature> getDemoFeatureList() {
         return Collections.unmodifiableList(demoFeatures);

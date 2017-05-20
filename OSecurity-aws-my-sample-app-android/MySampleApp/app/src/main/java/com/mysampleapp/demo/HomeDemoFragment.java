@@ -199,7 +199,8 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         snapshotView.setImageResource(android.R.drawable.alert_dark_frame);
         clientId = UUID.randomUUID().toString();
 
-        webView = (WebView) view.findViewById(R.id.webView);
+        vidView = (VideoView) view.findViewById(R.id.vidView);
+        vidControl = new MediaController(getActivity());
 
 
         //syncUserSettings();
@@ -338,25 +339,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         /**
          *
 
-        vidView = (VideoView) view.findViewById(R.id.vidView);
-        vidControl = new MediaController(getActivity());
 
-        vidControl.setAnchorView(vidView);
-        vidControl.setMediaPlayer(vidView);
-        //vidControl.setEnabled(false);
-        //String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-        //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
-        //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
-        //String vidAddress = "https://youtu.be/xrXBZWQxk44";
-        String vidAddress = "https://bgmrxtac.p50.rt3.io/stream";
-        //String vidAddress = "https://youtu.be/P47bqscizJY";
-        Uri vidUri = Uri.parse(vidAddress);
-        //vidView.setVideoURI(vidUri);
-        vidView.setVideoURI(vidUri);
-        vidView.setMediaController(vidControl);
-        vidView.requestFocus();
-
-        vidView.start();
          */
 
 
@@ -366,13 +349,16 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         return streamOnline;
     }
 
+
+
     public void setStreamOnline(boolean streamOnline) {
         this.streamOnline = streamOnline;
     }
 
     public void startStream(){
-        final String vidAddress = "https://www.google.no/";
+        //final String vidAddress = "http://176.34.150.29:1935/osecstream/myStream/manifest.f4m";
 
+        /**
         //int width = webView.getWidth();
         //int height = webView.getHeight();
         //webView.loadUrl(vidAddress + "?width="+width+"&height="+height);
@@ -384,12 +370,41 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         streamingSpinner.setVisibility(View.GONE);
         setStreamOnline(true);
         streamingButton.setText("Stopp stream");
+         */
+        snapshotView.setVisibility(View.GONE);
+        streamingButton.setText("Stopp stream");
+
+        streamingSpinner.setVisibility(View.GONE);
+
+
+
+        vidControl.setAnchorView(vidView);
+        vidControl.setMediaPlayer(vidView);
+        //vidControl.setEnabled(false);
+        //String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+        //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
+        //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
+        //String vidAddress = "https://youtu.be/xrXBZWQxk44";
+        String vidAddress = "rtsp://176.34.150.29:1935/osecstream/myStream";
+        //String vidAddress = "https://youtu.be/P47bqscizJY";
+        Uri vidUri = Uri.parse(vidAddress);
+        //vidView.setVideoURI(vidUri);
+        vidView.setVideoURI(vidUri);
+        vidView.setMediaController(vidControl);
+        vidView.requestFocus();
+
+        vidView.start();
+        vidView.setVisibility(View.VISIBLE);
+        setStreamOnline(true);
+
+
 
     }
     public void stopStream() {
-        webView.loadUrl("about:blank");
-        snapshotView.setVisibility(View.VISIBLE);
+        vidView.stopPlayback();
+        vidView.setVisibility(View.GONE);
         streamingSpinner.setVisibility(View.GONE);
+        snapshotView.setVisibility(View.VISIBLE);
         setStreamOnline(false);
         streamingButton.setText("Start stream");
     }
@@ -399,7 +414,6 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
         switch (view.getId()) {
             case R.id.mqttButton:
                 Log.d(LOG_TAG, "mqtt clicked!");
-                //handleS3();
                 publish();
                 break;
             case R.id.streamingButton:
