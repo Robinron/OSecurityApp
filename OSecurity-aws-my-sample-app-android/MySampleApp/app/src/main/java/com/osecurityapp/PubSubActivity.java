@@ -173,7 +173,17 @@ public class PubSubActivity extends AppCompatActivity {
     private void setupSignInButtons() {
 
         signOutButton = (Button) findViewById(R.id.button_signout);
-        //signOutButton.setOnClickListener(this);
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                identityManager = AWSMobileClient.defaultMobileClient().getIdentityManager();
+                identityManager.signOut();
+                startActivity(new Intent(PubSubActivity.this, SignInActivity.class));
+                Log.d(LOG_TAG, "Sign out is clicked");
+                finish();
+                return;
+            }
+        });
 
     }
 
@@ -504,8 +514,9 @@ public class PubSubActivity extends AppCompatActivity {
     public void onClick(final View view) {
         if (view == signOutButton) {
             // The user is currently signed in with a provider. Sign out of that provider.
-            identityManager.signOut();
+            //.signOut();
             startActivity(new Intent(this, SignInActivity.class));
+            Log.d(LOG_TAG, "Sign out is clicked");
             finish();
             return;
         }

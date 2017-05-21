@@ -1,4 +1,4 @@
-#Sun May 21 05:19:03 CEST 2017
+#Sun May 21 22:16:36 CEST 2017
 base.0=C\:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_1cbe9a2be4664d49ae14c398dc3548d2be6840d4
 renamed.1=classes2.dex
 renamed.0=classes.dex

@@ -161,6 +161,7 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
 
         mqttButton = (Button) view.findViewById(R.id.mqttButton);
         mqttButton.setOnClickListener(this);
+        mqttButton.setText("Venter på terminal...");
 
         streamingButton = (Button) view.findViewById(R.id.streamingButton);
         streamingButton.setOnClickListener(this);

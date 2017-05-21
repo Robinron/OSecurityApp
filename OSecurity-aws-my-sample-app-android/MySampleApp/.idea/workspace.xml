@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04eb5e60-ebde-4812-8f7e-52788242efc4" name="Default" comment="" />
@@ -40,47 +40,12 @@
     <favorites_list name="MySampleApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="NavigationDrawer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding>
-                <element signature="e#9141#9176#0" expanded="true" />
-                <element signature="e#9736#9772#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArchiveFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/ArchiveFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="159" column="79" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="79" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="944">
+              <caret line="58" column="43" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -89,54 +54,82 @@
       <file leaf-file-name="PubSubActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
+            <state relative-caret-position="150">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
-                <element signature="e#6550#6582#0" expanded="true" />
-                <element signature="e#6793#6828#0" expanded="true" />
-                <element signature="e#7046#7082#0" expanded="true" />
+                <element signature="e#5718#6141#0" expanded="true" />
+                <element signature="e#6140#6141#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-              <folding>
-                <element signature="e#449#479#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
+      <file leaf-file-name="theme_4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_4.png">
+          <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
+      <file leaf-file-name="theme_1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme_2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_archive.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_archive.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+            <state relative-caret-position="102">
+              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#448#478#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_archive.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_archive.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2">
+        </entry>
+      </file>
+      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_home.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+          <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -146,6 +139,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="ASClass" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -2874,11 +2868,17 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/SettingsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mysampleapp/contentproviders/SettingsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/selector_osec_btn.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -2908,7 +2908,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3020,6 +3022,36 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3077,7 +3109,187 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap-xxxhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap-xxhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap-mdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3220,13 +3432,53 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="osecurityapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contentproviders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MySampleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -3236,7 +3488,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="device.picker.selection" value="Nexus_5X_API_24_x86" />
-    <property name="SearchEverywhereHistoryKey" value="showHome&#9;PSI&#9;JAVA://com.mysampleapp.navigation.NavigationDrawer#showHome&#10;MainActivity&#9;PSI&#9;JAVA://android.support.v4.content.IntentCompat#makeMainActivity&#10;getUserSession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#getCognitoUserSession&#10;getJwt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;getjwt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken#getJWTToken&#10;getUserSes&#9;PSI&#9;JAVA://null#getUserSession&#10;getIdentityManager&#9;PSI&#9;JAVA://com.amazonaws.mobile.AWSMobileClient#getIdentityManager&#10;identityManager&#9;PSI&#9;JAVA://com.mysampleapp.demo.IdentityDemoFragment#identityManager&#10;ContentManager&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.AvailableS3ContentIterator#contentManager&#10;getJWTToken&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;CognitoAccessToken&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/39a3018aee421bd16bc086a92b9bede977da5c93/aws-android-sdk-cognitoidentityprovider-2.3.9.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.class&#10;cognitoUserToken&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoUserToken.java&#10;jwtt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken#getJWTToken&#10;onsuccess&#9;PSI&#9;JAVA://null#onSuccess&#10;onSuccess&#9;PSI&#9;JAVA://null#onSuccess&#10;snap&#9;FILE&#9;file:///Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/java/com/mysampleapp/SnapshotsHelper.java&#10;snapshot&#9;FILE&#9;file:///Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/java/com/mysampleapp/SnapshotsHelper.java&#10;FragmentMana&#9;PSI&#9;JAVA://android.app.FragmentManager&#10;usersess&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/CognitoUserSession.java&#10;transferuti&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility&#10;transferlistener&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.s3.transferutility.TransferListener&#10;downloadContent&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.ContentManager.DownloadRecentS3ContentRunner&#10;download&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.TransferHelper#download&#10;cognitocaching&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.3.9/72671dddbc76c61a8300343d8551368fc5f38472/aws-android-sdk-core-2.3.9-sources.jar!/com/amazonaws/auth/CognitoCachingCredentialsProvider.java&#10;setIdToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType#setIdToken&#10;getIdToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType#getIdToken&#10;logins()&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentity.model.GetCredentialsForIdentityRequest#logins&#10;cognitousersession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;UserSignIn&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager.SignInStateChangeListener#onUserSignedIn&#10;Identityprovider&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager#currentIdentityProvider&#10;cognitoUserSession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;authenticationHandler&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#authenticationHandler&#10;CognitoUser&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;getAccessToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.DeleteUserAttributesRequest#getAccessToken&#10;accessToken&#9;PSI&#9;JAVA://com.mysampleapp.PubSubActivity#accessToken&#10;getToken&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityProvider#getToken&#10;cognitoAccess&#9;FILE&#9;jar://C:/Users/Sondre/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/39a3018aee421bd16bc086a92b9bede977da5c93/aws-android-sdk-cognitoidentityprovider-2.3.9.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.class&#10;getJWT&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;appid&#9;PSI&#9;JAVA://com.mysampleapp.BuildConfig#APPLICATION_ID&#10;CognitoIdentityP&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager.AWSRefreshingCognitoIdentityProvider&#10;getRefreshToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.CreateUserPoolClientRequest#getRefreshTokenValidity&#10;AuthenticationResult&#9;PSI&#9;JAVA://android.support.v4.hardware.fingerprint.FingerprintManagerCompat.AuthenticationResult&#10;getIdToken()&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession#getIdToken&#10;CognitoIdToken&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken&#10;accesstoken&#9;FILE&#9;jar://C:/Users/Sondre/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.java&#10;Authentication&#9;FILE&#9;jar://C:/Users/Sondre/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/handlers/AuthenticationHandler.java&#10;userSession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;AuthenticationHandler &#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler&#10;setToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentity.model.GetOpenIdTokenResult#setToken&#10;idToken&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession#getIdToken" />
+    <property name="SearchEverywhereHistoryKey" value="signoutButton&#9;PSI&#9;JAVA://com.osecurityapp.PubSubActivity#signOutButton&#10;navigationDrawer&#9;PSI&#9;JAVA://com.osecurityapp.PubSubActivity#navigationDrawer&#10;LogOut&#9;PSI&#9;JAVA://javax.security.auth.login.LoginContext#LOGOUT_METHOD&#10;syncmanager&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognito.CognitoSyncManager&#10;logout&#9;PSI&#9;JAVA://sun.rmi.log.LogOutputStream&#10;showHome&#9;PSI&#9;JAVA://com.mysampleapp.navigation.NavigationDrawer#showHome&#10;MainActivity&#9;PSI&#9;JAVA://android.support.v4.content.IntentCompat#makeMainActivity&#10;getUserSession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#getCognitoUserSession&#10;getJwt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;getjwt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken#getJWTToken&#10;getUserSes&#9;PSI&#9;JAVA://null#getUserSession&#10;getIdentityManager&#9;PSI&#9;JAVA://com.amazonaws.mobile.AWSMobileClient#getIdentityManager&#10;identityManager&#9;PSI&#9;JAVA://com.mysampleapp.demo.IdentityDemoFragment#identityManager&#10;ContentManager&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.AvailableS3ContentIterator#contentManager&#10;getJWTToken&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;CognitoAccessToken&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/39a3018aee421bd16bc086a92b9bede977da5c93/aws-android-sdk-cognitoidentityprovider-2.3.9.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.class&#10;cognitoUserToken&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoUserToken.java&#10;jwtt&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoAccessToken#getJWTToken&#10;onsuccess&#9;PSI&#9;JAVA://null#onSuccess&#10;onSuccess&#9;PSI&#9;JAVA://null#onSuccess&#10;snap&#9;FILE&#9;file:///Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/java/com/mysampleapp/SnapshotsHelper.java&#10;snapshot&#9;FILE&#9;file:///Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/java/com/mysampleapp/SnapshotsHelper.java&#10;FragmentMana&#9;PSI&#9;JAVA://android.app.FragmentManager&#10;usersess&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/CognitoUserSession.java&#10;transferuti&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility&#10;transferlistener&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.s3.transferutility.TransferListener&#10;downloadContent&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.ContentManager.DownloadRecentS3ContentRunner&#10;download&#9;PSI&#9;JAVA://com.amazonaws.mobile.content.TransferHelper#download&#10;cognitocaching&#9;FILE&#9;jar:///Users/robinmoudnib/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.3.9/72671dddbc76c61a8300343d8551368fc5f38472/aws-android-sdk-core-2.3.9-sources.jar!/com/amazonaws/auth/CognitoCachingCredentialsProvider.java&#10;setIdToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType#setIdToken&#10;getIdToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.AuthenticationResultType#getIdToken&#10;logins()&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentity.model.GetCredentialsForIdentityRequest#logins&#10;cognitousersession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;UserSignIn&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager.SignInStateChangeListener#onUserSignedIn&#10;Identityprovider&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager#currentIdentityProvider&#10;cognitoUserSession&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;authenticationHandler&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#authenticationHandler&#10;CognitoUser&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.signin.CognitoUserPoolsSignInProvider#cognitoUserSession&#10;getAccessToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.DeleteUserAttributesRequest#getAccessToken&#10;accessToken&#9;PSI&#9;JAVA://com.mysampleapp.PubSubActivity#accessToken&#10;getToken&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityProvider#getToken&#10;cognitoAccess&#9;FILE&#9;jar://C:/Users/Sondre/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/39a3018aee421bd16bc086a92b9bede977da5c93/aws-android-sdk-cognitoidentityprovider-2.3.9.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.class&#10;getJWT&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken#getJWTToken&#10;appid&#9;PSI&#9;JAVA://com.mysampleapp.BuildConfig#APPLICATION_ID&#10;CognitoIdentityP&#9;PSI&#9;JAVA://com.amazonaws.mobile.user.IdentityManager.AWSRefreshingCognitoIdentityProvider&#10;getRefreshToken&#9;PSI&#9;JAVA://com.amazonaws.services.cognitoidentityprovider.model.CreateUserPoolClientRequest#getRefreshTokenValidity&#10;AuthenticationResult&#9;PSI&#9;JAVA://android.support.v4.hardware.fingerprint.FingerprintManagerCompat.AuthenticationResult&#10;getIdToken()&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession#getIdToken&#10;CognitoIdToken&#9;PSI&#9;JAVA://com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken&#10;accesstoken&#9;FILE&#9;jar://C:/Users/Sondre/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.3.9/361de5fb171f55d4d35fd2294a9ccb16f54d3475/aws-android-sdk-cognitoidentityprovider-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognitoidentityprovider/tokens/CognitoAccessToken.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
   </component>
   <component name="RecentsManager">
@@ -3250,6 +3502,9 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
       <recent name="com.mysampleapp.MainActivity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\res\mipmap-xxxhdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3578,21 +3833,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32293987" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40423164" sideWeight="0.4978678" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40423164" sideWeight="0.4978678" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739422" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.344098" sideWeight="0.42643923" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32739422" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.116926506" sideWeight="0.42643923" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3633,21 +3888,82 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/ArchiveFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="159" column="79" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_archive.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="92" column="28" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -3663,26 +3979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
-          <folding>
-            <element signature="e#6550#6582#0" expanded="true" />
-            <element signature="e#6793#6828#0" expanded="true" />
-            <element signature="e#7046#7082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/InstructionFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -3693,65 +3989,261 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/ArchiveFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="1275">
           <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="e#9141#9176#0" expanded="true" />
-            <element signature="e#9736#9772#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_archive.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
       <provider editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_button_theme1.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/icon_check.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#449#479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/icon_check_dated.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/icon_delay.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/osecurity button.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/button_folder_open.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/button_folder.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_1_selected.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_1_pressed.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/button_login_pressed.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/button_login.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/osecurity_btn.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/osec_btn.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/osec_btn_pressed.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_button_folder.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="159" column="79" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="79" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_button_login.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_osec_btn.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="154" column="13" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_drawer_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/sun/rmi/log/LogOutputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="187" column="13" selection-start-line="187" selection-start-column="13" selection-end-line="187" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/javax/security/auth/login/LoginContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="254" column="35" selection-start-line="254" selection-start-column="29" selection-end-line="254" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognito/2.3.9/cd807aeb9f1b34a6773d8cddfdda538e4d3e142e/aws-android-sdk-cognito-2.3.9-sources.jar!/com/amazonaws/mobileconnectors/cognito/CognitoSyncManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#5718#6141#0" expanded="true" />
+            <element signature="e#6140#6141#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/theme_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="944">
+          <caret line="58" column="43" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vitamio/src/io/vov/vitamio/widget/VideoView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1338">
+          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_archive.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding>
+            <element signature="e#448#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>

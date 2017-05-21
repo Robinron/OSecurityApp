@@ -68,6 +68,10 @@
         "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\theme_4.png"
     },
     {
+        "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\osec_btn_pressed.png",
+        "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\osec_btn_pressed.png"
+    },
+    {
         "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\theme_1.png",
         "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\theme_1.png"
     },
@@ -102,6 +106,10 @@
     {
         "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\theme_4_pressed.png",
         "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\theme_4_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\osec_btn.png",
+        "source": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\osec_btn.png"
     },
     {
         "merged": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\theme_2_pressed.png",
