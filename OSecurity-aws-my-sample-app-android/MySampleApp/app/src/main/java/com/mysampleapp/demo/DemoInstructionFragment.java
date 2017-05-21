@@ -52,22 +52,22 @@ public class DemoInstructionFragment extends DemoFragmentBase {
         // Set the title for the instruction fragment.
         final ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle(demoFeature.titleResId);
+            //actionBar.setTitle(demoFeature.titleResId);
         }
-        final TextView tvOverview = (TextView) view.findViewById(R.id.text_demo_feature_overview);
-        tvOverview.setText(demoFeature.overviewResId);
+        //final TextView tvOverview = (TextView) view.findViewById(R.id.text_demo_feature_overview);
+        //tvOverview.setText(demoFeature.overviewResId);
         final TextView tvDescription = (TextView) view.findViewById(
                 R.id.text_demo_feature_description);
-        if (demoFeature.descriptionResId > 0) {
-            tvDescription.setText(demoFeature.descriptionResId);
-        } else {
+       // if (demoFeature.descriptionResId > 0) {
+            //tvDescription.setText(demoFeature.descriptionResId);
+
             final TextView tvDescHeading = (TextView) view.findViewById(R.id.text_demo_feature_description_heading);
             tvDescHeading.setVisibility(View.GONE);
             tvDescription.setVisibility(View.GONE);
-        }
+
         final TextView tvPoweredBy = (TextView) view.findViewById(
                 R.id.text_demo_feature_powered_by);
-        tvPoweredBy.setText(demoFeature.poweredByResId);
+        //tvPoweredBy.setText(demoFeature.poweredByResId);
 
         final ArrayAdapter<DemoConfiguration.DemoItem> adapter = new ArrayAdapter<DemoConfiguration.DemoItem>(
                 getActivity(), R.layout.list_item_icon_text_with_subtitle) {
@@ -100,7 +100,7 @@ public class DemoInstructionFragment extends DemoFragmentBase {
                 return view;
             }
         };
-        adapter.addAll(demoFeature.demos);
+        //adapter.addAll(demoFeature.demos);
 
         final ListView listView = (ListView) view.findViewById(android.R.id.list);
         if (adapter.getCount() > (int) maxVisibleDemos) {

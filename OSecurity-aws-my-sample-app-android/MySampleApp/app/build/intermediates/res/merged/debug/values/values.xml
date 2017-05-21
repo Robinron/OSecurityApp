@@ -602,7 +602,7 @@
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
-    <integer name="google_play_services_version">10298000</integer>
+    <integer name="google_play_services_version">10240000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
@@ -728,6 +728,7 @@
     <string name="main_nav_menu_default_user_text">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
     <string name="main_nav_menu_item_archive">Arkiv</string>
     <string name="main_nav_menu_item_home">Hjem</string>
+    <string name="main_nav_menu_item_settings">Innstillinger</string>
     <string name="mediacontroller_play_pause">Play/Pause</string>
     <string name="mfa_code_sent_message">Kode sendt.</string>
     <string name="mfa_header">MFA verification is required to authenticate.</string>

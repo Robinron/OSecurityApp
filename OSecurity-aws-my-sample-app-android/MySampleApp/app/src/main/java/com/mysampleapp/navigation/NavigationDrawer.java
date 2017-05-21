@@ -28,6 +28,7 @@ import com.mysampleapp.demo.ArchiveFragment;
 import com.mysampleapp.demo.DemoConfiguration;
 import com.mysampleapp.demo.DemoInstructionFragment;
 import com.mysampleapp.demo.HomeDemoFragment;
+import com.mysampleapp.demo.SettingsFragment;
 
 import static com.mysampleapp.R.string.app_name;
 
@@ -91,9 +92,9 @@ public class NavigationDrawer {
                     showHome();
                     return;
                 } else if (position == 1) {
-                    //Arkiv
+                    showArchive();
                 } else if (position == 2) {
-                    //Innstillinger
+                    showSettings();
                 }
 
                 DemoConfiguration.DemoFeature item = adapter.getItem(position);
@@ -222,6 +223,20 @@ public class NavigationDrawer {
         // Set the title for the fragment.
         final ActionBar actionBar = containingActivity.getSupportActionBar();
         actionBar.setTitle(R.string.main_nav_menu_item_archive);
+        closeDrawer();
+    }
+    public void showSettings() {
+        final Fragment fragment = new SettingsFragment();
+
+        containingActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .replace(fragmentContainerId, fragment, ArchiveFragment.class.getSimpleName())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
+
+        // Set the title for the fragment.
+        final ActionBar actionBar = containingActivity.getSupportActionBar();
+        actionBar.setTitle(R.string.main_nav_menu_item_settings);
         closeDrawer();
     }
 

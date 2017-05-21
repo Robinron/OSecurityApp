@@ -268,8 +268,7 @@ public class HomeDemoFragment extends DemoFragmentBase implements View.OnClickLi
                 MY_REGION
         );
          */
-        Boolean loseMyShit = true;
-        String bachlor = "";
+
        // logins.put("eu-west-1_2F3hyifQN", idToken);
 
        // credentialsProvider.setLogins(logins);

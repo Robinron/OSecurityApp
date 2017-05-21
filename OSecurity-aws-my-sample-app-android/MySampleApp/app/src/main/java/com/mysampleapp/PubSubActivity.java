@@ -216,6 +216,12 @@ public class PubSubActivity extends AppCompatActivity {
         archive.titleResId = R.string.main_nav_menu_item_archive;
         navigationDrawer.addDemoFeatureToMenu(archive);
 
+        DemoConfiguration.DemoFeature settings = new DemoConfiguration.DemoFeature();
+        settings.iconResId = R.mipmap.splash_icon;
+        settings.titleResId = R.string.main_nav_menu_item_settings;
+        navigationDrawer.addDemoFeatureToMenu(settings);
+
+
         for (DemoConfiguration.DemoFeature demoFeature : DemoConfiguration.getDemoFeatureList()) {
             navigationDrawer.addDemoFeatureToMenu(demoFeature);
         }

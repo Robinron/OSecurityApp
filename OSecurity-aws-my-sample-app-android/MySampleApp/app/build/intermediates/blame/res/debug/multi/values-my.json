@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml",
+        "outputFile": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 313
                 },
                 "from": {
-                    "file": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/res/values-my/values.xml",
+                    "file": "C:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\10.2.4\\res\\values-my\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
