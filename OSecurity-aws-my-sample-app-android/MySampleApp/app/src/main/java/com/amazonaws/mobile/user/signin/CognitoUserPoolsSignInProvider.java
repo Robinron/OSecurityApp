@@ -32,31 +32,29 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.Authentic
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.ForgotPasswordHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.GenericHandler;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.SignUpHandler;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.tokens.CognitoIdToken;
-import com.mysampleapp.R;
-import com.mysampleapp.SignInActivity;
-import com.mysampleapp.demo.userpools.ForgotPasswordActivity;
-import com.mysampleapp.demo.userpools.MFAActivity;
-import com.mysampleapp.demo.userpools.SignUpActivity;
-import com.mysampleapp.demo.userpools.SignUpConfirmActivity;
-import com.mysampleapp.util.ViewHelper;
+import com.osecurityapp.R;
+import com.osecurityapp.contentproviders.userpools.ForgotPasswordActivity;
+import com.osecurityapp.contentproviders.userpools.MFAActivity;
+import com.osecurityapp.contentproviders.userpools.SignUpActivity;
+import com.osecurityapp.contentproviders.userpools.SignUpConfirmActivity;
+import com.osecurityapp.util.ViewHelper;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
-import static com.mysampleapp.R.string.login_failed;
-import static com.mysampleapp.R.string.login_success;
-import static com.mysampleapp.R.string.password_change_failed;
-import static com.mysampleapp.R.string.password_change_success;
-import static com.mysampleapp.R.string.sign_up_confirm_failed;
-import static com.mysampleapp.R.string.sign_up_confirm_success;
-import static com.mysampleapp.R.string.sign_up_failed;
-import static com.mysampleapp.R.string.sign_up_success;
-import static com.mysampleapp.R.string.title_activity_forgot_password;
-import static com.mysampleapp.R.string.title_activity_sign_in;
-import static com.mysampleapp.R.string.title_activity_sign_up;
-import static com.mysampleapp.R.string.title_activity_sign_up_confirm;
+import static com.osecurityapp.R.string.login_failed;
+import static com.osecurityapp.R.string.login_success;
+import static com.osecurityapp.R.string.password_change_failed;
+import static com.osecurityapp.R.string.password_change_success;
+import static com.osecurityapp.R.string.sign_up_confirm_failed;
+import static com.osecurityapp.R.string.sign_up_confirm_success;
+import static com.osecurityapp.R.string.sign_up_failed;
+import static com.osecurityapp.R.string.sign_up_success;
+import static com.osecurityapp.R.string.title_activity_forgot_password;
+import static com.osecurityapp.R.string.title_activity_sign_in;
+import static com.osecurityapp.R.string.title_activity_sign_up;
+import static com.osecurityapp.R.string.title_activity_sign_up_confirm;
 
 /**
  * Manages sign-in using Cognito User Pools.

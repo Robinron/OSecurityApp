@@ -2,7 +2,7 @@
 manifest
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:13:1-136:12
 	package
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:14:5-30
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:14:5-31
 		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -79,15 +79,15 @@ MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Sondre\Document
 	android:theme
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:30:9-40
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:26:9-36
-activity#com.mysampleapp.SplashActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:26:9-52
+activity#com.osecurityapp.SplashActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:37:9-46:20
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:40:13-45
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:39:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:38:13-43
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:38:13-59
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:41:13-45:29
 action#android.intent.action.MAIN
@@ -98,54 +98,54 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:44:17-77
 	android:name
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:44:27-74
-activity#com.mysampleapp.SignInActivity
+activity#com.osecurityapp.SignInActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:47:9-50:71
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:50:13-59
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:49:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:48:13-43
-activity#com.mysampleapp.demo.userpools.ForgotPasswordActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:48:13-59
+activity#com.osecurityapp.contentproviders.userpools.ForgotPasswordActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:51:9-54:79
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:54:13-67
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:53:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:52:13-66
-activity#com.mysampleapp.demo.userpools.SignUpActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:52:13-94
+activity#com.osecurityapp.contentproviders.userpools.SignUpActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:55:9-58:71
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:58:13-59
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:57:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:56:13-58
-activity#com.mysampleapp.demo.userpools.MFAActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:56:13-86
+activity#com.osecurityapp.contentproviders.userpools.MFAActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:59:9-62:67
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:62:13-55
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:61:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:60:13-55
-activity#com.mysampleapp.demo.userpools.SignUpConfirmActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:60:13-83
+activity#com.osecurityapp.contentproviders.userpools.SignUpConfirmActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:63:9-66:79
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:66:13-67
 	android:configChanges
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:65:13-83
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:64:13-65
-activity#com.mysampleapp.PubSubActivity
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:64:13-93
+activity#com.osecurityapp.PubSubActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:67:9-70:60
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:69:13-56
 	android:launchMode
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:70:13-48
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:68:13-43
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:68:13-59
 service#com.amazonaws.mobileconnectors.s3.transferutility.TransferService
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:83:9-85:38
 	android:enabled
@@ -196,40 +196,40 @@ ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:109:17-63
 	android:name
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:108:17-67
-service#com.mysampleapp.MyFirebaseInstanceIDService
+service#com.osecurityapp.MyFirebaseInstanceIDService
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:112:9-116:19
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:112:18-61
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:112:18-77
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:113:13-115:29
 action#com.google.firebase.INSTANCE_ID_EVENT
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:114:17-80
 	android:name
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:114:25-77
-service#com.mysampleapp.MyFirebaseMessagingService
+service#com.osecurityapp.MyFirebaseMessagingService
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:117:9-121:19
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:117:18-60
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:117:18-76
 intent-filter#com.google.firebase.MESSAGING_EVENT
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:118:13-120:29
 action#com.google.firebase.MESSAGING_EVENT
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:119:17-78
 	android:name
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:119:25-75
-activity#com.mysampleapp.StreamingActivity
+activity#com.osecurityapp.StreamingActivity
 ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:125:9-133:20
 	android:label
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:127:13-61
 	android:parentActivityName
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:128:13-55
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:128:13-71
 	android:theme
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:129:13-44
 	android:name
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:126:13-46
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:126:13-62
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:130:13-132:64
+ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:130:13-132:65
 	android:value
-		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:132:17-61
+		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:132:17-62
 	android:name
 		ADDED from C:\Users\Sondre\Documents\GitHub\TestAWS\OSecurity-aws-my-sample-app-android\MySampleApp\app\src\main\AndroidManifest.xml:131:17-63
 uses-sdk

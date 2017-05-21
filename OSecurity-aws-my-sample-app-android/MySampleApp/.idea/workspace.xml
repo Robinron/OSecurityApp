@@ -42,20 +42,20 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="NavigationDrawer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/navigation/NavigationDrawer.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
               <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
-                <element signature="e#9113#9148#0" expanded="true" />
-                <element signature="e#9708#9744#0" expanded="true" />
+                <element signature="e#9141#9176#0" expanded="true" />
+                <element signature="e#9736#9772#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ArchiveFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/ArchiveFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/ArchiveFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
               <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
@@ -66,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeDemoFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/HomeDemoFragment.java">
+      <file leaf-file-name="HomeFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="131">
-              <caret line="186" column="84" selection-start-line="186" selection-start-column="7" selection-end-line="186" selection-end-column="84" />
+              <caret line="159" column="79" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -87,14 +87,14 @@
         </entry>
       </file>
       <file leaf-file-name="PubSubActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/PubSubActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="218" column="37" selection-start-line="218" selection-start-column="37" selection-end-line="218" selection-end-column="37" />
+              <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
               <folding>
-                <element signature="e#7054#7086#0" expanded="true" />
-                <element signature="e#7305#7340#0" expanded="true" />
-                <element signature="e#7566#7602#0" expanded="true" />
+                <element signature="e#6550#6582#0" expanded="true" />
+                <element signature="e#6793#6828#0" expanded="true" />
+                <element signature="e#7046#7082#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,7 +106,7 @@
             <state relative-caret-position="204">
               <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
-                <element signature="e#436#466#0" expanded="true" />
+                <element signature="e#449#479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,10 +116,10 @@
         </entry>
       </file>
       <file leaf-file-name="SettingsFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/SettingsFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            <state relative-caret-position="391">
+              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2872,6 +2872,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mysampleapp/navigation/NavigationDrawer.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mysampleapp/contentproviders/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java" />
       </list>
     </option>
   </component>
@@ -3109,7 +3111,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mysampleapp" />
+              <option name="myItemId" value="osecurityapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3143,7 +3145,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mysampleapp" />
+              <option name="myItemId" value="osecurityapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -3181,11 +3183,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mysampleapp" />
+              <option name="myItemId" value="osecurityapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
+              <option name="myItemId" value="contentproviders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3642,7 +3644,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_demo_home.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
@@ -3653,7 +3655,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/mysampleapp/R.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/osecurityapp/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="3061" column="32" selection-start-line="3061" selection-start-column="32" selection-end-line="3061" selection-end-column="32" />
@@ -3669,19 +3671,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/PubSubActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/PubSubActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="218" column="37" selection-start-line="218" selection-start-column="37" selection-end-line="218" selection-end-column="37" />
+          <caret line="206" column="33" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
           <folding>
-            <element signature="e#7054#7086#0" expanded="true" />
-            <element signature="e#7305#7340#0" expanded="true" />
-            <element signature="e#7566#7602#0" expanded="true" />
+            <element signature="e#6550#6582#0" expanded="true" />
+            <element signature="e#6793#6828#0" expanded="true" />
+            <element signature="e#7046#7082#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/DemoInstructionFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/InstructionFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
@@ -3689,7 +3691,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/ArchiveFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/ArchiveFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
@@ -3699,13 +3701,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/navigation/NavigationDrawer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/navigation/NavigationDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <element signature="e#9113#9148#0" expanded="true" />
-            <element signature="e#9708#9744#0" expanded="true" />
+            <element signature="e#9141#9176#0" expanded="true" />
+            <element signature="e#9736#9772#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3726,7 +3728,7 @@
         <state relative-caret-position="204">
           <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
-            <element signature="e#436#466#0" expanded="true" />
+            <element signature="e#449#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3734,18 +3736,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/HomeDemoFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
-          <caret line="186" column="84" selection-start-line="186" selection-start-column="7" selection-end-line="186" selection-end-column="84" />
+          <caret line="159" column="79" selection-start-line="159" selection-start-column="7" selection-end-line="159" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mysampleapp/demo/SettingsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/osecurityapp/contentproviders/SettingsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="391">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
