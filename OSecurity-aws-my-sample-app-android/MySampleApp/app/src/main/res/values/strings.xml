@@ -15,6 +15,7 @@
     <string name="open_video">Open video</string>
     <string name="main_nav_menu_item_home">Hjem</string>
     <string name="main_nav_menu_item_archive">Arkiv</string>
+    <string name="main_nav_menu_item_settings">Innstillinger</string>
     <string name="title_activity_item_detail">Item Detail</string>
     <string name="title_activity_item_list">Item List</string>
     <string name="title_activity_main">@string/app_name</string>
