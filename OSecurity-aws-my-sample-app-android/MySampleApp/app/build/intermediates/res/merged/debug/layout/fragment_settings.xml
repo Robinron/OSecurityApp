@@ -20,6 +20,6 @@
         android:text="Button"
         android:layout_width="282dp"
         android:layout_height="211dp"
-        android:id="@+id/button2" />
+        android:id="@+id/buttonSettings" />
 
 </FrameLayout>

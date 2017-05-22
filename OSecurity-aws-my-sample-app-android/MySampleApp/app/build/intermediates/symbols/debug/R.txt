@@ -769,9 +769,9 @@ int id auto 0x7f0f0034
 int id beginning 0x7f0f0047
 int id bottom 0x7f0f0035
 int id button1 0x7f0f00c2
-int id button2 0x7f0f00de
 int id button3 0x7f0f00dd
 int id buttonPanel 0x7f0f005a
+int id buttonSettings 0x7f0f00de
 int id button_signout 0x7f0f0093
 int id cancel_action 0x7f0f00fd
 int id center 0x7f0f0036

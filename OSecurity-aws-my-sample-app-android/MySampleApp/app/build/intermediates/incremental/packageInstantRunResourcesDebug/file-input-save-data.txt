@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 22 00:14:51 CEST 2017
+#Mon May 22 01:54:24 CEST 2017
 210.set=ANDROID_RESOURCE
 282.file=C\:\\Users\\Sondre\\Documents\\GitHub\\TestAWS\\OSecurity-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png
 14.set=ANDROID_RESOURCE

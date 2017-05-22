@@ -2753,9 +2753,9 @@ containing a value of this type.
         public static final int beginning=0x7f0f0047;
         public static final int bottom=0x7f0f0035;
         public static final int button1=0x7f0f00c2;
-        public static final int button2=0x7f0f00de;
         public static final int button3=0x7f0f00dd;
         public static final int buttonPanel=0x7f0f005a;
+        public static final int buttonSettings=0x7f0f00de;
         public static final int button_signout=0x7f0f0093;
         public static final int cancel_action=0x7f0f00fd;
         public static final int center=0x7f0f0036;
