@@ -14,6 +14,7 @@ import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,7 +60,7 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
     private ImageView snapshotView;
     private String firebaseToken;
     private String firebaseID;
-    private Spinner streamingSpinner;
+    private ProgressBar streamingSpinner;
     private VideoView vidView;
     private MediaController vidControl;
     private WebView webView;
@@ -166,7 +167,7 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
         streamingButton = (Button) view.findViewById(R.id.streamingButton);
         streamingButton.setOnClickListener(this);
 
-        streamingSpinner = (Spinner) view.findViewById(R.id.streamSpinner);
+        streamingSpinner = (ProgressBar) view.findViewById(R.id.streamSpinner);
         streamingSpinner.setVisibility(View.GONE);
         snapshotTimestamp = (TextView) view.findViewById(R.id.snapshotTimestamp);
         snapshotView = (ImageView) view.findViewById(R.id.snapshotView);
@@ -358,7 +359,7 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
         //String vidAddress = "rtmp://1.23171047.fme.ustream.tv/ustreamVideo/23171047";
         //String vidAddress = "https://www.youtube.com/watch?v=vzojwG7OB7c";
         //String vidAddress = "https://youtu.be/xrXBZWQxk44";
-        String vidAddress = "rtsp://176.34.150.29:1935/osecstream/myStream";
+        String vidAddress = "rtsp://54.194.74.138:1935/osecstream/myStream";
         //String vidAddress = "https://youtu.be/P47bqscizJY";
         Uri vidUri = Uri.parse(vidAddress);
         //vidView.setVideoURI(vidUri);
@@ -392,14 +393,15 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
             case R.id.streamingButton:
                 if (isStreamOnline() == false) {
                     streamingSpinner.setVisibility(View.VISIBLE);
+                    snapshotView.setVisibility(View.GONE);
+                    vidView.setVisibility(View.GONE);
                     Log.d(LOG_TAG, "Start stream clicked!");
-                    startStream();
+                    mqttManager.publishString("stream", "/osecurity/fromapp", AWSIotMqttQos.QOS0);
                 }
                 else if (isStreamOnline() == true) {
                     streamingSpinner.setVisibility(View.VISIBLE);
                     Log.d(LOG_TAG, "Stop stream clicked!");
-                    stopStream();
-
+                    mqttManager.publishString("stopStream", "/osecurity/fromapp", AWSIotMqttQos.QOS0);
                 }
 
                 break;
@@ -648,6 +650,10 @@ public class HomeFragment extends FragmentBase implements View.OnClickListener {
                                             Log.d(LOG_TAG, "Terminal er online, funker");
                                             Toast toast = Toast.makeText(getActivity(), "Terminal er online!", Toast.LENGTH_SHORT);
                                             toast.show();
+                                        } else if (message.equals("stream online")){
+                                            startStream();
+                                        } else if (message.equals("stream offline")){
+                                            stopStream();
                                         } else {
                                             Log.d(LOG_TAG, "Unsupported input from Pi");
                                         }

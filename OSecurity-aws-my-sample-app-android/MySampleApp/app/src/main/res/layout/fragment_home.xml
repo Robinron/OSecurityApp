@@ -60,12 +60,12 @@
                 android:layout_centerVertical="true"
                 android:elevation="100dp"/>
 
-            <Spinner
+            <ProgressBar
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:id="@+id/streamSpinner"
                 android:layout_marginLeft="140dp"
-                android:layout_marginTop="65dp"/>
+                android:layout_marginTop="65dp" />
 
         </FrameLayout>
 
