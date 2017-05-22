@@ -42,7 +42,7 @@
         android:value="25.3.1" />
 
     <application
-        android:name="com.mysampleapp.Application"
+        android:name="com.osecurityapp.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -54,7 +54,7 @@
         -->
 
         <activity
-            android:name="com.mysampleapp.SplashActivity"
+            android:name="com.osecurityapp.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
@@ -64,27 +64,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mysampleapp.SignInActivity"
+            android:name="com.osecurityapp.SignInActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_in" />
         <activity
-            android:name="com.mysampleapp.demo.userpools.ForgotPasswordActivity"
+            android:name="com.osecurityapp.contentproviders.userpools.ForgotPasswordActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_forgot_password" />
         <activity
-            android:name="com.mysampleapp.demo.userpools.SignUpActivity"
+            android:name="com.osecurityapp.contentproviders.userpools.SignUpActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_up" />
         <activity
-            android:name="com.mysampleapp.demo.userpools.MFAActivity"
+            android:name="com.osecurityapp.contentproviders.userpools.MFAActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_mfa" />
         <activity
-            android:name="com.mysampleapp.demo.userpools.SignUpConfirmActivity"
+            android:name="com.osecurityapp.contentproviders.userpools.SignUpConfirmActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_sign_up_confirm" />
         <activity
-            android:name="com.mysampleapp.PubSubActivity"
+            android:name="com.osecurityapp.PubSubActivity"
             android:label="@string/title_activity_main"
             android:launchMode="singleInstance" />
 
@@ -128,12 +128,12 @@
                 android:resource="@xml/content_delivery_paths" />
         </provider>
 
-        <service android:name="com.mysampleapp.MyFirebaseInstanceIDService" >
+        <service android:name="com.osecurityapp.MyFirebaseInstanceIDService" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.mysampleapp.MyFirebaseMessagingService" >
+        <service android:name="com.osecurityapp.MyFirebaseMessagingService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -142,13 +142,13 @@
         <!-- END - APP CONTENT DELIVERY AND USER DATA STORAGE -->
 
         <activity
-            android:name="com.mysampleapp.StreamingActivity"
+            android:name="com.osecurityapp.StreamingActivity"
             android:label="@string/title_activity_streaming"
-            android:parentActivityName="com.mysampleapp.MainActivity"
+            android:parentActivityName="com.osecurityapp.MainActivity"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mysampleapp.MainActivity" />
+                android:value="com.osecurityapp.MainActivity" />
         </activity>
         <activity
             android:name="io.vov.vitamio.activity.InitActivity"
