@@ -93,8 +93,10 @@ public class NavigationDrawer {
                     return;
                 } else if (position == 1) {
                     showArchive();
+                    return;
                 } else if (position == 2) {
                     showSettings();
+                    return;
                 }
 
                 Configuration.DemoFeature item = adapter.getItem(position);
@@ -212,13 +214,14 @@ public class NavigationDrawer {
     }
 
     public void showArchive() {
-        final Fragment fragment = new ArchiveFragment();
+        final Fragment aFragment = new ArchiveFragment();
 
         containingActivity.getSupportFragmentManager()
                 .beginTransaction()
-                .replace(fragmentContainerId, fragment, ArchiveFragment.class.getSimpleName())
+                .replace(fragmentContainerId, aFragment, ArchiveFragment.class.getSimpleName())
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
+
 
         // Set the title for the fragment.
         final ActionBar actionBar = containingActivity.getSupportActionBar();

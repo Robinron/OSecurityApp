@@ -5,42 +5,47 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="27269183820473"
+    timestamp="15010678881016"
     token="5830540801881922955"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1517" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="30" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
+
+    <artifact
+        location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="26231281271727"
+        timestamp="13123048255565"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="27162261689677"
+        timestamp="14383805501002"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
             type="RESOURCES" />
+    </build>
+    <build
+        timestamp="15010678881016"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
             type="DEX" />
     </build>
-    <build
-        timestamp="27269183820473"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

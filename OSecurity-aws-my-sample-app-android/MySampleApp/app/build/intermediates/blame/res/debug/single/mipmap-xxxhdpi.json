@@ -40,20 +40,20 @@
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/theme_1_selected.png"
     },
     {
-        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/icon_home.png",
-        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/icon_home.png"
-    },
-    {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/button_folder.png",
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/button_folder.png"
     },
     {
-        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/button_folder_open.png",
-        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/button_folder_open.png"
+        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/icon_home.png",
+        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/icon_home.png"
     },
     {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/button_login.png",
         "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/button_login.png"
+    },
+    {
+        "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/button_folder_open.png",
+        "source": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/src/main/res/mipmap-xxxhdpi/button_folder_open.png"
     },
     {
         "merged": "/Users/robinmoudnib/Documents/TestAWS/OSecurity-aws-my-sample-app-android/MySampleApp/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/icon_delay.png",
